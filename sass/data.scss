@@ -1,0 +1,401 @@
+@charset "utf-8";
+@import "common";
+$text-color : #808080;
+$bg-color : rgb(51, 51, 51);
+$width : 1080px;
+@mixin center{
+    width: $width;
+    margin: 0 auto;
+}
+.sharCode{
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 101;
+    height: 144px;
+    .app_code:hover dl{
+        display: block;
+    }
+    .app_code{
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        position: relative;
+        background: url(../img/rightBar-code.png) 0 center no-repeat;
+        
+        div{
+            position: absolute;
+            top: -65px;
+            left: -160px;
+            display: block;
+                    span{
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            z-index: 100;
+            display: inline-block;
+            width: 15px;
+            height: 30px;
+            margin-top: -14px;
+            background: url(../img/right-triangle.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        dl{
+            display: none;
+            padding: 10px;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 1px 10px 4px rgba(0,0,0,.05);
+            dt{
+                width: 130px;
+                height: 130px;
+                background: url(../img/app.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            dd{
+                margin-top: 10px;
+                text-align: center;
+                color: #523669;
+                font-size: 14px;
+            }
+        }
+        }
+    }
+    .backTop{
+        width: 48px;
+        height: 48px;
+        background: url(../img/back_top.png) 0 center no-repeat;
+    }
+}
+.header{
+    a{
+        color: #cdcdcd;
+    }
+    a:hover{
+        color: #fff;
+    }
+    width: 100%;
+    height: 30px;
+    background: #333;
+    .clearfix{
+       @include center;
+       .header-nav{
+           float: left;
+           height: 30px;
+           line-height: 30px;
+           li{
+               float: left;
+               font-size: 12px;
+               a{
+                   color: #ccc;
+               }
+               a:hover{
+                    color: #fff;
+                }
+               b{
+                    display: inline-block;
+                    width: 1px;
+                    height: 11px;
+                    margin: 0 18px;
+                    background: #cbcbcb;
+                    vertical-align: middle;
+               }
+           }
+       }
+       .header-user {
+            float: right;
+            height: 30px;
+            .user-out{
+                a:hover{
+                    color: #fff;
+                }
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #cdcdcd;
+                vertical-align: middle;
+                .user-login {
+                    color: #cdcdcd;
+                    margin-right: 20px;
+                }
+                b {
+                    display: inline-block;
+                    width: 1px;
+                    height: 11px;
+                    margin: 0 18px;
+                    background: #ccc;
+                    vertical-align: middle;
+                }
+            }
+            .user-app:hover{
+                div{
+                    display: block;
+                }
+            }
+            .user-app {
+                position: relative;
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #cdcdcd;
+                vertical-align: middle;
+                  div {
+                    position: absolute;
+                    top: 25px;
+                    left: -38px;
+                    z-index: 115;
+                    display: none;
+                        i {
+                            position: relative;
+                            z-index: 1;
+                            display: block;
+                            width: 30px;
+                            height: 15px;
+                            margin: 0 auto;
+                            background:  url(../img/triangle.png) no-repeat;
+                            background-size: 100% 100%;
+                           }
+                       dl{
+                            padding: 15px 10px 10px;
+                            border-radius: 4px;
+                            background: #fff;
+                            box-shadow: 0 1px 10px 4px rgba(0,0,0,.05);
+                            dt {
+                                width: 40px;
+                                height: 40px;
+                                margin: 0 auto;
+                                background: url(../img/appLogo.png) no-repeat;
+                            }
+                            dd {
+                                width: 40px;
+                                margin-top: 10px;
+                                line-height: 24px;
+                                font-size: 12px;
+                                color: #523669;
+                                text-align: center;
+                                width: 150px;
+                                span{
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 12px;
+                                    text-align: center;
+                                }
+                                p{
+                                    width: 130px;
+                                    height: 130px;
+                                    margin: 10px auto 0;
+                                    background: url(http://static1.biyao.com/pc/common/img/master/app.png?v=biyao_42175f7) no-repeat;
+                                    background-size: 100% 100%;
+                                }
+                            }
+                       }
+                   
+                }
+                b {
+                    display: inline-block;
+                    width: 1px;
+                    height: 11px;
+                    margin: 0 18px;
+                    background: #ccc;
+                    vertical-align: middle;
+                }
+            }
+            .user-msg{
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #cdcdcd;
+                vertical-align: middle;
+                .msg-center {
+                    
+                    margin-right: 10px;
+                    display: inline-block;
+                    height: 30px;
+                    padding-left: 20px;
+                    line-height: 30px;
+                    font-size: 12px;
+                    color: #ccc;
+                    text-align: center;
+                    background: url(http://static3.biyao.com/pc/common/img/master/msgcenter.png?v=biyao_9f0627d) no-repeat 2px 9px;
+                    #hasMsg {
+                        visibility: hidden;
+                        width: 5px;
+                        height: 5px;
+                        background: #F43431;
+                        position: relative;
+                        z-index: 122;
+                        display: inline-block;
+                        border-radius: 50%;
+                        top: -7px;
+                        left: -3px;
+                        .msg-title {
+                            display: inline-block;
+                            width: 52px;
+                        }
+                        a:hover{
+                        color: #fff;
+                        }
+                        #unread {
+                            margin-left: 5px;
+                            margin-right: -5px;
+                            display: inline-block;
+                            width: 25px;
+                            position: relative;
+                            left: -10px;
+                        }
+                    }
+                }
+                
+            }
+            
+            .user-shopCar{
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                color: #cdcdcd;
+                vertical-align: middle;
+                
+                a {
+                    display: inline-block;
+                    width: 90px;
+                    padding-left: 20px;
+                    font-size: 12px;
+                    color: #ccc;
+                    text-align: center;
+                    background: #523669 url(http://static.biyao.com/pc/common/img/master/shopCar.png?v=biyao_b27f89c) no-repeat 15px 7px;
+                    i {
+                        padding-left: 4px;
+                    }
+                }
+                a:hover{
+                        color: #fff;
+                        }
+            }
+        }
+         .clearfix:after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                line-height: 0;
+                height: 0;
+            }    
+    }    
+}
+
+.footer{
+    width: 100%;
+    margin-top: 60px;
+    background: #fff;
+    div{
+        @include center;
+        text-align: center;
+        .foot_ul{
+            border-bottom: 1px solid #ccc;
+            dt:nth-of-type(1){
+                            background: url(../img/foot1.png) no-repeat;
+                    }
+                    dt:nth-of-type(2){
+                            background: url(../img/foot2.png) no-repeat;
+                    }
+                    dt:nth-of-type(3){
+                            background: url(../img/foot3.png) no-repeat;
+                    }
+                    dt:nth-of-type(4){
+                            background: url(../img/foot4.png) no-repeat;
+                    }
+            li{
+                float: left;
+                width: 270px;
+                height: 120px;
+                dl{
+                    line-height: 120px;
+                    dt{
+                    display: inline-block;
+                    width: 80px;
+                    height: 80px;
+                    vertical-align: middle;
+                    background-size: 100% 100%;
+                    }
+                    
+                    dd{
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #333;
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+        .foot_main{
+            margin-top: 30px;
+            .foot_detail{
+                float: left;
+                padding-left: 50px;
+                text-align: left;
+                border-right: 1px solid #ccc;
+                li{
+                    width: 64px;
+                    float: left;
+                    margin-right: 120px;
+                    h2{
+                        font-size: 16px;
+                        color: #333;
+                        font-weight: normal;
+                    }
+                    ul{
+                        margin-top: 30px;
+                        li{
+                            margin-bottom: 10px;
+                            a{
+                                display: block;
+                                font-size: 12px;
+                                color: #808080;
+                            }
+                        }
+                    }
+                }
+                li:last-of-type{
+                    width: 96px;
+                    p img{
+                        width: 105px;
+                        height: 105px;
+                        margin-top: 15px;
+                    }            
+                }
+            }
+            .foot_contact{
+                float: left;
+                width: 260px;
+                padding-top: 30px;
+                span{
+                    font-size: 12px;
+                    color: #808080;
+                }
+                p{
+                    margin: 5px 0;
+                    font-size: 30px;
+                    color: #523669;
+                }
+            }
+        }
+        .foot_info{
+            float: left;
+            margin-top: 60px;
+            padding-bottom: 10px;
+            font-size: 12px;
+            color: #808080;
+            a{
+                color: #808080;
+            }
+            p{
+                margin-bottom: 10px;
+                span{
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    
+}
