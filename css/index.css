@@ -111,6 +111,58 @@ a:hover {
   margin-left: auto;
   margin-right: auto; }
 
+.sharCode {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  z-index: 101;
+  height: 144px; }
+  .sharCode .app_code:hover dl {
+    display: block; }
+  .sharCode .app_code {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    background: url(../img/rightBar-code.png) 0 center no-repeat; }
+    .sharCode .app_code div {
+      position: absolute;
+      top: -65px;
+      left: -160px;
+      display: block; }
+      .sharCode .app_code div span {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        z-index: 100;
+        display: none;
+        width: 15px;
+        height: 30px;
+        margin-top: -14px;
+        background: url(../img/right-triangle.png) no-repeat;
+        background-size: 100% 100%; }
+      .sharCode .app_code div dl {
+        display: none;
+        padding: 10px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.05); }
+        .sharCode .app_code div dl dt {
+          width: 130px;
+          height: 130px;
+          background: url(../img/app.png) center center no-repeat;
+          background-size: 100% 100%; }
+        .sharCode .app_code div dl dd {
+          margin-top: 10px;
+          text-align: center;
+          color: #523669;
+          font-size: 14px; }
+  .sharCode .backTop {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background: url(../img/back_top.png) 0 center no-repeat; }
+
 .nav {
   z-index: 110;
   width: 100%;
@@ -157,6 +209,7 @@ a:hover {
           cursor: pointer; }
     .nav .nav-fix .nav-category {
       display: none;
+      z-index: 999;
       position: relative;
       float: left; }
       .nav .nav-fix .nav-category p {
@@ -174,8 +227,9 @@ a:hover {
           background: url(../img/categoryDown.png) no-repeat; }
       .nav .nav-fix .nav-category div {
         position: absolute;
-        top: 70px; }
+        top: 59px; }
         .nav .nav-fix .nav-category div .nav-list {
+          display: none;
           position: absolute;
           left: 0;
           top: 0;
@@ -234,13 +288,15 @@ a:hover {
                   padding-top: 14px;
                   border-bottom: 1px solid #f2f2f2; }
                   .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub ul .nav-item {
-                    display: block;
                     float: left;
                     margin: 0 20px 15px 0;
                     line-height: 20px; }
                     .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub ul .nav-item a {
                       text-align: center;
-                      color: #808080; }
+                      color: #808080;
+                      font-size: 12px;
+                      display: block;
+                      width: 70px; }
 
 .banner {
   position: relative;

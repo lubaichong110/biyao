@@ -7,66 +7,7 @@ $width : 1080px;
     width: $width;
     margin: 0 auto;
 }
-.sharCode{
-    position: fixed;
-    right: 30px;
-    bottom: 100px;
-    z-index: 101;
-    height: 144px;
-    .app_code:hover dl{
-        display: block;
-    }
-    .app_code{
-        width: 48px;
-        height: 48px;
-        cursor: pointer;
-        position: relative;
-        background: url(../img/rightBar-code.png) 0 center no-repeat;
-        
-        div{
-            position: absolute;
-            top: -65px;
-            left: -160px;
-            display: block;
-                    span{
-            position: absolute;
-            top: 50%;
-            right: -15px;
-            z-index: 100;
-            display: inline-block;
-            width: 15px;
-            height: 30px;
-            margin-top: -14px;
-            background: url(../img/right-triangle.png) no-repeat;
-            background-size: 100% 100%;
-        }
-        dl{
-            display: none;
-            padding: 10px;
-            border-radius: 4px;
-            background: #fff;
-            box-shadow: 0 1px 10px 4px rgba(0,0,0,.05);
-            dt{
-                width: 130px;
-                height: 130px;
-                background: url(../img/app.png) center center no-repeat;
-                background-size: 100% 100%;
-            }
-            dd{
-                margin-top: 10px;
-                text-align: center;
-                color: #523669;
-                font-size: 14px;
-            }
-        }
-        }
-    }
-    .backTop{
-        width: 48px;
-        height: 48px;
-        background: url(../img/back_top.png) 0 center no-repeat;
-    }
-}
+
 .header{
     a{
         color: #cdcdcd;
@@ -184,7 +125,7 @@ $width : 1080px;
                                     width: 130px;
                                     height: 130px;
                                     margin: 10px auto 0;
-                                    background: url(http://static1.biyao.com/pc/common/img/master/app.png?v=biyao_42175f7) no-repeat;
+                                    background: url(../img/app.png) no-repeat;
                                     background-size: 100% 100%;
                                 }
                             }
@@ -216,7 +157,7 @@ $width : 1080px;
                     font-size: 12px;
                     color: #ccc;
                     text-align: center;
-                    background: url(http://static3.biyao.com/pc/common/img/master/msgcenter.png?v=biyao_9f0627d) no-repeat 2px 9px;
+                    background: url(../img/msgcenter.png) no-repeat 2px 9px;
                     #hasMsg {
                         visibility: hidden;
                         width: 5px;
@@ -262,7 +203,7 @@ $width : 1080px;
                     font-size: 12px;
                     color: #ccc;
                     text-align: center;
-                    background: #523669 url(http://static.biyao.com/pc/common/img/master/shopCar.png?v=biyao_b27f89c) no-repeat 15px 7px;
+                    background: #523669 url(../img/shopCar.png) no-repeat 15px 7px;
                     i {
                         padding-left: 4px;
                     }
@@ -287,6 +228,19 @@ $width : 1080px;
     width: 100%;
     margin-top: 60px;
     background: #fff;
+    .wxCode{
+        display: none;
+        position: absolute;
+        top: -20px;
+        left: 60px;
+        width: 114px;
+        height: 114px;
+        background: url(../img/wxCode.jpg) center center no-repeat;
+        background-size: 100% 100%;
+    }
+    .wx:hover+span{
+        display: block;
+    }
     div{
         @include center;
         text-align: center;
@@ -335,6 +289,7 @@ $width : 1080px;
                 text-align: left;
                 border-right: 1px solid #ccc;
                 li{
+                    position: relative;
                     width: 64px;
                     float: left;
                     margin-right: 120px;
