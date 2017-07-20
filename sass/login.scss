@@ -1,0 +1,139 @@
+.account-main{
+    width: 400px;
+    height: 580px;
+    margin: 0 auto;
+    ul{
+        padding-top: 30px;
+        li{
+            position: relative;
+            margin-top: 20px;
+        }
+        input {
+            height: 17px;
+            width: 360px;
+            padding: 11px 20px;
+            border: 1px solid #e8e8e8;
+            line-height: 17px;
+            font: 14px "Microsoft YaHei";
+            color: #999;
+            background: #fff;
+            outline: none;
+            vertical-align: middle;
+        }
+        //登录
+        .account-title {
+            font-size: 20px;
+            color: #523669;
+            b{
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                margin-right: 10px;
+                vertical-align: middle;
+                background: url(../img/sprit_biyao.png) no-repeat;
+                background-position: 0 -521px;
+            }
+        }
+        //error
+        .account-error {
+                position: absolute;
+                right: -315px;
+                top: 0;
+                display: block;
+                width: 300px;
+                height: 40px;
+                line-height: 40px;
+                color: #F49F26;
+        }
+        //biankuang cuowu tishi
+        .account-main .input-error {
+            border: 1px solid #F49F26;
+        }
+        .login-auto{
+        span {
+            display: inline-block;
+            margin-right: 10px;
+            color: #8a8a8a;
+            cursor: pointer;
+            b{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                vertical-align: middle;
+                background: url(../img/commonSprite.png) no-repeat 0 -80px;
+            }
+        }
+        a{
+            float: right;
+            color: #07a6df;
+        }
+        }
+        .account-imgCode {
+            input {
+            height: 17px;
+            width: 160px;
+            padding: 11px 20px;
+            border: 1px solid #e8e8e8;
+            line-height: 17px;
+            font: 14px "Microsoft YaHei";
+            color: #999;
+            background: #fff;
+            outline: none;
+            vertical-align: middle;
+        }
+         img {
+                width: 120px;
+                height: 45px;
+                margin: 0 15px;
+            }
+         span{
+             display: inline-block;
+            color: #999;
+            text-decoration: underline;
+            cursor: pointer;
+            vertical-align: middle;
+         }
+        }
+        .account-prompt {
+            margin-top: 10px!important;
+            padding: 6px 0px;
+            color: #F49F26;
+        }
+        .account-btn {
+            height: 50px;
+            margin-top: 10px!important;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            background: #F49F26;
+        } 
+        .login-third {
+            margin-top: 40px!important;
+            text-align: center;
+            span {
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 14px;
+                color: #666;
+                vertical-align: middle;
+            }
+            a {
+                display: inline-block;
+                width: 100px;
+                height: 32px;
+                border-left: 1px solid #ddd;
+                color: #333;
+                vertical-align: middle;
+            }
+            a:nth-of-type(1){
+                background: url(../img/weixin.jpg) no-repeat;
+            }
+            a:nth-of-type(2){
+                background: url(../img/qq.jpg) no-repeat;
+            }
+        }
+    }
+}

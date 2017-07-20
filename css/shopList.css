@@ -1,0 +1,103 @@
+body {
+  background: #f9f9f9; }
+
+.nav_fixed {
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto; }
+
+.bread {
+  width: 1080px;
+  margin: 20px auto;
+  color: #333; }
+  .bread span {
+    color: #808080;
+    margin: 0 8px 0 5px; }
+
+.cateBread {
+  width: 1060px;
+  height: 50px;
+  margin: 20px auto 30px;
+  padding-left: 20px;
+  line-height: 50px;
+  background: #fff; }
+  .cateBread a {
+    font-size: 16px;
+    color: #808080; }
+  .cateBread a:hover {
+    color: #523669; }
+  .cateBread span {
+    float: left; }
+    .cateBread span a {
+      display: inline-block; }
+  .cateBread ul {
+    display: inline-block;
+    margin-left: 20px; }
+    .cateBread ul li {
+      float: left;
+      margin-right: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #808080; }
+
+.shop-list {
+  width: 1080px;
+  margin: 0 auto; }
+  .shop-list .shop_ul {
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 1100px; }
+    .shop-list .shop_ul .shop_li dl {
+      margin: 40px 0 20px; }
+      .shop-list .shop_ul .shop_li dl dt {
+        color: #333;
+        font-size: 24px;
+        text-align: center; }
+      .shop-list .shop_ul .shop_li dl dd {
+        margin-top: 10px;
+        color: #808080;
+        font-size: 16px;
+        text-align: center; }
+    .shop-list .shop_ul .shop_li ul {
+      width: 1100px;
+      overflow: hidden;
+      float: left; }
+      .shop-list .shop_ul .shop_li ul li {
+        float: left;
+        margin: 0 20px 20px 0; }
+        .shop-list .shop_ul .shop_li ul li a:hover {
+          box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.05); }
+        .shop-list .shop_ul .shop_li ul li a:hover img {
+          transform: scale3d(1.03, 1.03, 1); }
+        .shop-list .shop_ul .shop_li ul li a {
+          position: relative;
+          display: block;
+          width: 255px;
+          text-align: center;
+          height: 335px;
+          background: #fff;
+          transition: box-shadow 0.5s ease-in-out 0s; }
+          .shop-list .shop_ul .shop_li ul li a i {
+            display: inline-block;
+            width: 255px;
+            height: 255px;
+            overflow: hidden; }
+            .shop-list .shop_ul .shop_li ul li a i img {
+              width: 255px;
+              height: 255px;
+              transition: transform 0.5s ease-in-out 0s; }
+          .shop-list .shop_ul .shop_li ul li a dl {
+            height: 60px;
+            margin-top: 20px; }
+            .shop-list .shop_ul .shop_li ul li a dl dt {
+              color: #333;
+              font-size: 16px;
+              text-align: center; }
+            .shop-list .shop_ul .shop_li ul li a dl dd {
+              margin-top: 5px;
+              color: #ff3333;
+              font-size: 16px;
+              text-align: center; }
+
+/*# sourceMappingURL=shopList.css.map */

@@ -7,6 +7,196 @@ $width : 1080px;
     width: $width;
     margin: 0 auto;
 }
+//登录注册header
+.account-header{
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eae4e8;
+    div{
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        a{
+          float: left;
+          width: 231px;
+          height: 98px;
+          background: url(../img/logo.png) 0 center no-repeat;
+        }
+        p{
+            float: right;
+            line-height: 98px;
+            color: #8c8292;
+            span{
+               margin: 0 5px;
+            }
+        }
+    }
+}
+
+
+//右侧分享回到顶部框
+.sharCode{
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 101;
+    height: 144px;
+    
+//弹出分享框
+    .share_box{
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 450px;
+        margin-left: -245px;
+        margin-top: -115px;
+        padding: 0 20px 25px;
+        background-color: #fff;
+        p{
+            position: relative;
+            height: 40px;
+            border-bottom: 1px dotted #ccc;
+            line-height: 40px;
+            font-size: 18px;
+            background-color: #fff;
+            b{
+                position: absolute;
+                top: 14px;
+                right: 5px;
+                display: block;
+                height: 16px;
+                width: 16px;
+                background: url(../img/cls_btn.png) no-repeat;
+            }
+        }
+        .share_main{
+            padding-top: 15px;
+            overflow: hidden;
+            dl{
+                float: left;
+                padding-top: 8px;
+                padding-right: 25px;
+                border-right: 1px solid #e8e8e8;
+                vertical-align: middle;
+                dt{
+                    img{
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+                dd{
+                    line-height: 24px;
+                    color: #666;
+                }
+            }
+            ul{
+                float: left;
+                padding-top: 40px;
+                vertical-align: middle;
+                li:nth-of-type(1){
+                    a{
+                        background-position: -10px -190px;
+                    }
+                }
+                li:nth-of-type(2){
+                    a{
+                         background-position: -10px -130px;
+                    }
+                }
+                li:nth-of-type(3){
+                    a{
+                      background-position: -10px -70px;
+                    }
+                }
+                li:nth-of-type(4){
+                    a{
+                        background-position: -10px -10px;
+                    }
+                }
+                li{
+                    float: left;
+                    margin-left: 15px;
+                    a{
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        background: url(../img/share_new.png) top left no-repeat;
+                    }
+                    span{
+                        display: block;
+                        margin-top: 15px;
+                        font-size: 14px;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+    .app_code:hover dl{
+        display: block;
+    }
+    .shar_btn{
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      background: url(../img/rightBar-share.png) no-repeat;
+    }
+    
+    .app_code{
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        position: relative;
+        background: url(../img/rightBar-code.png) 0 center no-repeat;
+        
+        div{
+            position: absolute;
+            top: -65px;
+            left: -160px;
+            display: block;
+                    span{
+                        position: absolute;
+                        top: 50%;
+                        right: -15px;
+                        z-index: 100;
+                        display: none;
+                        width: 15px;
+                        height: 30px;
+                        margin-top: -14px;
+                        background: url(../img/right-triangle.png) no-repeat;
+                        background-size: 100% 100%;
+                    }
+        dl{
+            display: none;
+            padding: 10px;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 1px 10px 4px rgba(0,0,0,.05);
+            dt{
+                width: 130px;
+                height: 130px;
+                background: url(../img/app.png) center center no-repeat;
+                background-size: 100% 100%;
+            }
+            dd{
+                margin-top: 10px;
+                text-align: center;
+                color: #523669;
+                font-size: 14px;
+            }
+        }
+        }
+    }
+    .backTop{
+        display: none;
+        width: 48px;
+        height: 48px;
+        background: url(../img/back_top.png) 0 center no-repeat;
+    }
+}
+
+
 
 .header{
     a{
@@ -33,7 +223,7 @@ $width : 1080px;
                a:hover{
                     color: #fff;
                 }
-               b{
+               b{   
                     display: inline-block;
                     width: 1px;
                     height: 11px;
@@ -228,6 +418,7 @@ $width : 1080px;
     width: 100%;
     margin-top: 60px;
     background: #fff;
+    overflow: hidden;
     .wxCode{
         display: none;
         position: absolute;
@@ -245,6 +436,7 @@ $width : 1080px;
         @include center;
         text-align: center;
         .foot_ul{
+            overflow:hidden;
             border-bottom: 1px solid #ccc;
             dt:nth-of-type(1){
                             background: url(../img/foot1.png) no-repeat;
@@ -353,4 +545,165 @@ $width : 1080px;
         }
     }
     
+}
+
+.nav{
+    z-index: 110;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    .nav-fix{
+        @include center;
+        .nav-logo {
+            display: block;
+            float: left;
+            width: 231px;
+            height: 98px;
+            background: url(../img/logo.png) 0 center no-repeat;
+        }
+        //搜索框
+        .nav-search{
+            position: relative;
+            float: right;
+            margin-top: 30px;
+            width: 350px;
+            height: 40px;
+            p{
+                position: relative;
+                z-index: 2;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                background: #fff;
+                input{
+                    width: 298px;
+                    height: 38px;
+                    padding-left: 10px;
+                    border: none;
+                    line-height: 38px;
+                    color: #333;
+                    font-size: 16px;
+                    border-radius: 3px;
+                    vertical-align: middle;
+                }
+                span{
+                    display: inline-block;
+                    width: 39px;
+                    height: 38px;
+                    border-left: 1px solid #ccc;
+                    vertical-align: middle;
+                    background: url(../img/search.png) center center no-repeat;
+                    cursor: pointer;
+                }
+            }
+        }
+        //二级菜单
+        .nav-category{
+            display: none;
+            z-index: 999;
+            position: relative;
+            float: left;
+            p{
+                height: 60px;
+                line-height: 60px;
+                cursor: pointer;
+                span{
+                    color: #808080;
+                    font-size: 16px; 
+                }
+                i{
+                    display: inline-block;
+                    width: 15px;
+                    height: 8px;
+                    margin-left: 10px;
+                    background: url(../img/categoryDown.png) no-repeat;
+                }
+            }
+            div{
+                position: absolute;
+                top: 59px;
+                .nav-list{
+                    display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                height: 320px;
+                padding: 20px 0;
+                background-color: #625f66;
+                    .nav-main{
+                        width: 200px;
+                        height: 40px;
+                        p{
+                            height: 40px;
+                            line-height: 40px;
+                            padding-left: 30px;
+                            a{
+                               font-size: 14px;
+                               color: #fff;
+                            }
+                            span {
+                                margin: 0 5px;
+                                font-size: 16px;
+                                color: #fff;
+                            }
+                        }
+                        .sub_ul{
+                            display: none;
+                            position: absolute;
+                            left: 200px;
+                            top: 0;
+                            min-height: 331px;
+                            width: 700px;
+                            padding: 15px 0;
+                            background: #fff;
+                            box-shadow: 1px 0px 15px 5px rgba(0,0,0,.05);
+                            .nav-sub{
+                                width: 700px;
+                                height: 51px;
+                                display: block;
+                                a{
+                                display: inline-block;
+                                width: 62px;
+                                margin: -2px 10px 0;
+                                line-height: 20px;
+                                text-align: right;
+                                font-size: 14px;
+                                color: #333;
+                                vertical-align: middle;
+                                }
+                                i{
+                                    display: inline-block;
+                                    margin-top: 15px;
+                                    height: 20px;
+                                    line-height: 20px;
+                                    font-size: 14px;
+                                    color: #333;
+                                }
+                                ul{
+                                    float: right;
+                                    width: 567px;
+                                    margin: 0 20px 0 16px;
+                                    padding-top: 14px;
+                                    border-bottom: 1px solid #f2f2f2;
+                                    .nav-item{
+                                        float: left;
+                                        margin: 0 20px 15px 0;
+                                        line-height: 20px;
+                                        a{
+                                            text-align: center;
+                                            color: #808080;
+                                            font-size: 12px;
+                                            display: block;
+                                            width: 70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+            }
+             
+        }
+    }
 }

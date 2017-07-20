@@ -1,0 +1,113 @@
+.account-main {
+  width: 400px;
+  height: 580px;
+  margin: 0 auto; }
+  .account-main ul {
+    padding-top: 30px; }
+    .account-main ul li {
+      position: relative;
+      margin-top: 20px; }
+    .account-main ul input {
+      height: 17px;
+      width: 360px;
+      padding: 11px 20px;
+      border: 1px solid #e8e8e8;
+      line-height: 17px;
+      font: 14px "Microsoft YaHei";
+      color: #999;
+      background: #fff;
+      outline: none;
+      vertical-align: middle; }
+    .account-main ul .account-title {
+      font-size: 20px;
+      color: #523669; }
+      .account-main ul .account-title b {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background: url(../img/sprit_biyao.png) no-repeat;
+        background-position: 0 -521px; }
+    .account-main ul .account-error {
+      position: absolute;
+      right: -315px;
+      top: 0;
+      display: block;
+      width: 300px;
+      height: 40px;
+      line-height: 40px;
+      color: #F49F26; }
+    .account-main ul .account-main .input-error {
+      border: 1px solid #F49F26; }
+    .account-main ul .login-auto span {
+      display: inline-block;
+      margin-right: 10px;
+      color: #8a8a8a;
+      cursor: pointer; }
+      .account-main ul .login-auto span b {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background: url(../img/commonSprite.png) no-repeat 0 -80px; }
+    .account-main ul .login-auto a {
+      float: right;
+      color: #07a6df; }
+    .account-main ul .account-imgCode input {
+      height: 17px;
+      width: 160px;
+      padding: 11px 20px;
+      border: 1px solid #e8e8e8;
+      line-height: 17px;
+      font: 14px "Microsoft YaHei";
+      color: #999;
+      background: #fff;
+      outline: none;
+      vertical-align: middle; }
+    .account-main ul .account-imgCode img {
+      width: 120px;
+      height: 45px;
+      margin: 0 15px; }
+    .account-main ul .account-imgCode span {
+      display: inline-block;
+      color: #999;
+      text-decoration: underline;
+      cursor: pointer;
+      vertical-align: middle; }
+    .account-main ul .account-prompt {
+      margin-top: 10px !important;
+      padding: 6px 0px;
+      color: #F49F26; }
+    .account-main ul .account-btn {
+      height: 50px;
+      margin-top: 10px !important;
+      line-height: 50px;
+      text-align: center;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      background: #F49F26; }
+    .account-main ul .login-third {
+      margin-top: 40px !important;
+      text-align: center; }
+      .account-main ul .login-third span {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 14px;
+        color: #666;
+        vertical-align: middle; }
+      .account-main ul .login-third a {
+        display: inline-block;
+        width: 100px;
+        height: 32px;
+        border-left: 1px solid #ddd;
+        color: #333;
+        vertical-align: middle; }
+      .account-main ul .login-third a:nth-of-type(1) {
+        background: url(../img/weixin.jpg) no-repeat; }
+      .account-main ul .login-third a:nth-of-type(2) {
+        background: url(../img/qq.jpg) no-repeat; }
+
+/*# sourceMappingURL=login.css.map */

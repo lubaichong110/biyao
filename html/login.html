@@ -3,7 +3,50 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/data.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
 	</head>
 	<body>
+		<!-- 导航栏 -->
+<div class="account-header">
+	<div>
+		<a href="http://www.biyao.com/home/index.html"></a>
+		<p>欢迎来到必要，请<span class="account-login" style="cursor: pointer;">登录</span>|<span class="account-regist">注册</span></p>
+	</div>
+</div>
+	
+<div class="account-main">
+	<ul>
+		<li class="account-title"><b></b>用户登录</li>
+		<li><input type="text" name="userName" id="userName" maxLength="11"/><i class="account-error"></i></li>
+		<li><input type="password" name="password" id="password" maxLength="32"/><i class="account-error"></i></li>
+		<li class="account-imgCode">
+			<input type="text" name="imgCode" id="imgCode" maxlength="4"/>
+			<img src=""/>
+			<span>看不清<br>换一张</span>
+			<i class="account-error"></i>
+		</li>
+		<li class="login-auto">
+			<span><b></b>下次自动登录</span>
+			<a href="javascript:void(0);" id="findPassword">忘记密码</a>
+		</li>
+		<li class="account-prompt"></li>
+		<li class="account-btn">登录</li>
+		<li class="login-third">
+			<span>使用第三方账号登录：</span>
+			<a href="javascript:void(0);" id="thirdWX" class="third-wx"></a>
+			<a href="javascript:void(0);" id="thirdQQ" class="third-qq"></a>
+		</li>
+	</ul>
+</div>
+
+
+<div class="bottom"></div>
 	</body>
+	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+         $(function(){
+             $(".bottom").load("../data/data.html footer");
+         })
+	</script>
 </html>

@@ -111,6 +111,148 @@ a:hover {
   margin-left: auto;
   margin-right: auto; }
 
+.account-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eae4e8; }
+  .account-header div {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .account-header div a {
+      float: left;
+      width: 231px;
+      height: 98px;
+      background: url(../img/logo.png) 0 center no-repeat; }
+    .account-header div p {
+      float: right;
+      line-height: 98px;
+      color: #8c8292; }
+      .account-header div p span {
+        margin: 0 5px; }
+
+.sharCode {
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  z-index: 101;
+  height: 144px; }
+  .sharCode .share_box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    margin-left: -245px;
+    margin-top: -115px;
+    padding: 0 20px 25px;
+    background-color: #fff; }
+    .sharCode .share_box p {
+      position: relative;
+      height: 40px;
+      border-bottom: 1px dotted #ccc;
+      line-height: 40px;
+      font-size: 18px;
+      background-color: #fff; }
+      .sharCode .share_box p b {
+        position: absolute;
+        top: 14px;
+        right: 5px;
+        display: block;
+        height: 16px;
+        width: 16px;
+        background: url(../img/cls_btn.png) no-repeat; }
+    .sharCode .share_box .share_main {
+      padding-top: 15px;
+      overflow: hidden; }
+      .sharCode .share_box .share_main dl {
+        float: left;
+        padding-top: 8px;
+        padding-right: 25px;
+        border-right: 1px solid #e8e8e8;
+        vertical-align: middle; }
+        .sharCode .share_box .share_main dl dt img {
+          width: 120px;
+          height: 120px; }
+        .sharCode .share_box .share_main dl dd {
+          line-height: 24px;
+          color: #666; }
+      .sharCode .share_box .share_main ul {
+        float: left;
+        padding-top: 40px;
+        vertical-align: middle; }
+        .sharCode .share_box .share_main ul li:nth-of-type(1) a {
+          background-position: -10px -190px; }
+        .sharCode .share_box .share_main ul li:nth-of-type(2) a {
+          background-position: -10px -130px; }
+        .sharCode .share_box .share_main ul li:nth-of-type(3) a {
+          background-position: -10px -70px; }
+        .sharCode .share_box .share_main ul li:nth-of-type(4) a {
+          background-position: -10px -10px; }
+        .sharCode .share_box .share_main ul li {
+          float: left;
+          margin-left: 15px; }
+          .sharCode .share_box .share_main ul li a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: url(../img/share_new.png) top left no-repeat; }
+          .sharCode .share_box .share_main ul li span {
+            display: block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666; }
+  .sharCode .app_code:hover dl {
+    display: block; }
+  .sharCode .shar_btn {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background: url(../img/rightBar-share.png) no-repeat; }
+  .sharCode .app_code {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    background: url(../img/rightBar-code.png) 0 center no-repeat; }
+    .sharCode .app_code div {
+      position: absolute;
+      top: -65px;
+      left: -160px;
+      display: block; }
+      .sharCode .app_code div span {
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        z-index: 100;
+        display: none;
+        width: 15px;
+        height: 30px;
+        margin-top: -14px;
+        background: url(../img/right-triangle.png) no-repeat;
+        background-size: 100% 100%; }
+      .sharCode .app_code div dl {
+        display: none;
+        padding: 10px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.05); }
+        .sharCode .app_code div dl dt {
+          width: 130px;
+          height: 130px;
+          background: url(../img/app.png) center center no-repeat;
+          background-size: 100% 100%; }
+        .sharCode .app_code div dl dd {
+          margin-top: 10px;
+          text-align: center;
+          color: #523669;
+          font-size: 14px; }
+  .sharCode .backTop {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background: url(../img/back_top.png) 0 center no-repeat; }
+
 .header {
   width: 100%;
   height: 30px;
@@ -289,7 +431,8 @@ a:hover {
 .footer {
   width: 100%;
   margin-top: 60px;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
   .footer .wxCode {
     display: none;
     position: absolute;
@@ -306,6 +449,7 @@ a:hover {
     margin: 0 auto;
     text-align: center; }
     .footer div .foot_ul {
+      overflow: hidden;
       border-bottom: 1px solid #ccc; }
       .footer div .foot_ul dt:nth-of-type(1) {
         background: url(../img/foot1.png) no-repeat; }
@@ -386,5 +530,140 @@ a:hover {
         .footer div .foot_info p span {
           display: inline-block;
           margin: 0 10px; }
+
+.nav {
+  z-index: 110;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+  .nav .nav-fix {
+    width: 1080px;
+    margin: 0 auto; }
+    .nav .nav-fix .nav-logo {
+      display: block;
+      float: left;
+      width: 231px;
+      height: 98px;
+      background: url(../img/logo.png) 0 center no-repeat; }
+    .nav .nav-fix .nav-search {
+      position: relative;
+      float: right;
+      margin-top: 30px;
+      width: 350px;
+      height: 40px; }
+      .nav .nav-fix .nav-search p {
+        position: relative;
+        z-index: 2;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background: #fff; }
+        .nav .nav-fix .nav-search p input {
+          width: 298px;
+          height: 38px;
+          padding-left: 10px;
+          border: none;
+          line-height: 38px;
+          color: #333;
+          font-size: 16px;
+          border-radius: 3px;
+          vertical-align: middle; }
+        .nav .nav-fix .nav-search p span {
+          display: inline-block;
+          width: 39px;
+          height: 38px;
+          border-left: 1px solid #ccc;
+          vertical-align: middle;
+          background: url(../img/search.png) center center no-repeat;
+          cursor: pointer; }
+    .nav .nav-fix .nav-category {
+      display: none;
+      z-index: 999;
+      position: relative;
+      float: left; }
+      .nav .nav-fix .nav-category p {
+        height: 60px;
+        line-height: 60px;
+        cursor: pointer; }
+        .nav .nav-fix .nav-category p span {
+          color: #808080;
+          font-size: 16px; }
+        .nav .nav-fix .nav-category p i {
+          display: inline-block;
+          width: 15px;
+          height: 8px;
+          margin-left: 10px;
+          background: url(../img/categoryDown.png) no-repeat; }
+      .nav .nav-fix .nav-category div {
+        position: absolute;
+        top: 59px; }
+        .nav .nav-fix .nav-category div .nav-list {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          height: 320px;
+          padding: 20px 0;
+          background-color: #625f66; }
+          .nav .nav-fix .nav-category div .nav-list .nav-main {
+            width: 200px;
+            height: 40px; }
+            .nav .nav-fix .nav-category div .nav-list .nav-main p {
+              height: 40px;
+              line-height: 40px;
+              padding-left: 30px; }
+              .nav .nav-fix .nav-category div .nav-list .nav-main p a {
+                font-size: 14px;
+                color: #fff; }
+              .nav .nav-fix .nav-category div .nav-list .nav-main p span {
+                margin: 0 5px;
+                font-size: 16px;
+                color: #fff; }
+            .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul {
+              display: none;
+              position: absolute;
+              left: 200px;
+              top: 0;
+              min-height: 331px;
+              width: 700px;
+              padding: 15px 0;
+              background: #fff;
+              box-shadow: 1px 0px 15px 5px rgba(0, 0, 0, 0.05); }
+              .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub {
+                width: 700px;
+                height: 51px;
+                display: block; }
+                .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub a {
+                  display: inline-block;
+                  width: 62px;
+                  margin: -2px 10px 0;
+                  line-height: 20px;
+                  text-align: right;
+                  font-size: 14px;
+                  color: #333;
+                  vertical-align: middle; }
+                .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub i {
+                  display: inline-block;
+                  margin-top: 15px;
+                  height: 20px;
+                  line-height: 20px;
+                  font-size: 14px;
+                  color: #333; }
+                .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub ul {
+                  float: right;
+                  width: 567px;
+                  margin: 0 20px 0 16px;
+                  padding-top: 14px;
+                  border-bottom: 1px solid #f2f2f2; }
+                  .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub ul .nav-item {
+                    float: left;
+                    margin: 0 20px 15px 0;
+                    line-height: 20px; }
+                    .nav .nav-fix .nav-category div .nav-list .nav-main .sub_ul .nav-sub ul .nav-item a {
+                      text-align: center;
+                      color: #808080;
+                      font-size: 12px;
+                      display: block;
+                      width: 70px; }
 
 /*# sourceMappingURL=data.css.map */

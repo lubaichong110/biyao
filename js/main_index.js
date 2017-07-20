@@ -21,14 +21,22 @@ require(["jquery"],function($){
 		    
 		    //手风琴效果
 		    $('.container_2 ul li').mouseover(function(){
+		    	$(".container_2 ul li i").css({
+		        	"background": "rgba(0,0,0,0.3)"
+		        })
+		    	$(this).find("i").css({
+		            "background": "rgba(0,0,0,0)"
+		       })
 		        $(this).stop().animate({
 		            'width':'600px'
 		        }).siblings().stop().animate({
-		            'width':"148px"
+		            'width':"110px"
 		        })
+		        
 		    })
 		    //二级菜单
-		    var listLi=$(".nav-list .nav-main");
+		    function caidan(){
+		    	var listLi=$(".nav-list .nav-main");
 		    var a1s=$(".nav-main>p a");
 		    var a2s=$(".nav-item a")
 		    for(let i=0;i<listLi.length;i++){
@@ -57,6 +65,8 @@ require(["jquery"],function($){
 		    		this.style.color="#808080";
 		    	})
 		    }
+		    }
+		    caidan()
 		    //滚动出顶端菜单//回到顶部
 		    window.onscroll = function(){ 
 				 var t = document.documentElement.scrollTop || document.body.scrollTop; 
@@ -65,7 +75,7 @@ require(["jquery"],function($){
 				 	$(".backTop").css("display","block");
 				 }
 				 $(".backTop").click(function(){
-				 	var speed=800;//滑动的速度
+				 	var speed=400;//滑动的速度
 			        $('body,html').stop().animate({ scrollTop: 0 }, speed);
 			        return false;
 				 })
@@ -160,7 +170,7 @@ require(["jquery"],function($){
 		  //滚到到一定高度再加载一堆
 		  $(window).scroll(function(){
 		  	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; 
-		  	console.log(scrollTop)
+		  	//console.log(scrollTop)
 		  	if(scrollTop>5600){
 		  	var str ="";
 		  	if(a){
