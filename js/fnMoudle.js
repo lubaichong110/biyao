@@ -5,7 +5,7 @@ define(function(){
 		    window.onscroll = function(){ 
 				 var t = document.documentElement.scrollTop || document.body.scrollTop; 
 				 //console.log(t)
-				 if(t>0){
+				 if(t>100){
 				 	$(".backTop").css("display","block");
 				 	$(".sharCode li").css("z-index","99")
 				 }
@@ -47,7 +47,8 @@ define(function(){
 		    }
              //滚动出顶部菜单
 				 if( t >= 500 ) {
-				 	$(".nav").css({
+				  var timerNav=	setTimeout(function(){
+				 		$(".nav").css({
 				 		"position":"fixed",
 				 		"top":"0",
 				 		"z-index":"99"
@@ -55,7 +56,9 @@ define(function(){
 				 	$(".nav-logo").css("display","none");
 				 	$(".nav-category").css("display","block");
 				 	$(".nav-search").css("margin-top","10px");
+				 	},100)
 				 }else{
+				 	clearTimeout(timerNav);
 				 	$(".nav").css({
 				 		"position":""
 				 	})
@@ -96,7 +99,42 @@ define(function(){
 		    
 		    }//menu
 		    
+		    //分享框
+		    function code(){
+		    	$(".shar_btn").click(function(){
+		         $(".share_box").css("display","block");
+		         $(".sharCode").css({
+		         	display:"block",
+		         	top: 0,
+				    left: 0,
+				    zIndex: 110,
+				    height: "100%",
+				    width: "100%",
+				    background: "rgba(0,0,0,.5)"
+		         })
+		         $(".sharCode>li").css({
+		         	display:"none" 
+		         })
+	       })
+			$(".close").click(function(){
+				
+		    	$(".share_box").css("display","none");
+		    	$(".sharCode>li").css({
+		         	display:"block" 
+		         })
+		         $(".sharCode").css({
+		         	position: "fixed",
+				    right: "30px",
+				    bottom: "100px",
+				    height: "144px",
+		         	top: "",
+				    width: "",
+				    background: ""
+		         })
+		    })
+		    }
 		    return {
-		    	menu : menu
+		    	menu : menu,
+		    	code : code
 		    }
 })

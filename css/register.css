@@ -135,6 +135,8 @@ a:hover {
   width: 400px;
   height: 580px;
   margin: 0 auto; }
+  .account-main .input-error {
+    border: 1px solid #F49F26; }
   .account-main ul {
     padding-top: 30px; }
     .account-main ul li {
@@ -171,18 +173,23 @@ a:hover {
         vertical-align: middle;
         background: url(../img/sprit_biyao.png) no-repeat;
         background-position: 0 -521px; }
-    .account-main ul .account-imgCode #imgCode {
-      width: 160px; }
-    .account-main ul .account-imgCode img {
-      width: 120px;
-      height: 45px;
-      margin: 0 15px; }
-    .account-main ul .account-imgCode span {
-      display: inline-block;
-      color: #999;
-      text-decoration: underline;
-      cursor: pointer;
-      vertical-align: middle; }
+    .account-main ul .account-imgCode {
+      display: none; }
+      .account-main ul .account-imgCode #imgCode {
+        width: 160px;
+        float: left; }
+      .account-main ul .account-imgCode #container {
+        display: inline-block;
+        float: left;
+        width: 120px;
+        height: 45px;
+        margin: 0 15px; }
+      .account-main ul .account-imgCode span {
+        display: inline-block;
+        color: #999;
+        text-decoration: underline;
+        cursor: pointer;
+        vertical-align: middle; }
     .account-main ul .account-phoneCode input {
       width: 200px; }
     .account-main ul .account-phoneCode .input-error {
@@ -207,13 +214,13 @@ a:hover {
       margin-right: 10px;
       color: #8a8a8a;
       cursor: pointer; }
-      .account-main ul .regist-agree span b {
+      .account-main ul .regist-agree span .regist-yes {
         display: inline-block;
         width: 15px;
         height: 15px;
         margin-right: 10px;
         vertical-align: bottom;
-        background: url(../img/commonSprite.png) no-repeat -20px -80px; }
+        background: url(../img/commonSprite.png) no-repeat 0px -80px; }
     .account-main ul .regist-agree a {
       margin-left: 10px;
       color: #07a6df; }

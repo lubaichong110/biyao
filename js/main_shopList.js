@@ -7,33 +7,7 @@ require.config({//配置main_index.js所依赖的模块
 require(["jquery","fnMoudle"],function($,fnMoudle){
 	$(function(){
 		$(".code").load("../data/data.html .sharCode",function(){
-			$(".shar_btn").click(function(){
-		         $(".share_box").css("display","block");
-		         $(".sharCode").css({
-		         	display:"block",
-		         	top: 0,
-				    left: 0,
-				    zIndex: 110,
-				    height: "100%",
-				    width: "100%",
-				    background: "rgba(0,0,0,.5)"
-		         })
-		         $(".sharCode>li").css({
-		         	display:"none" 
-		         })
-	       })
-			$(".close").click(function(){
-		    	$(".share_box").css("display","none");
-		         $(".sharCode").css({
-		         	position: "fixed",
-				    right: "30px",
-				    bottom: "100px",
-				    height: "144px",
-		         	top: "",
-				    width: "",
-				    background: ""
-		         })
-		    })
+			fnMoudle.code();
 		});
 		$(".top").load("../data/data.html header");
 		$(".nav_fixed").load("../data/data.html .nav");

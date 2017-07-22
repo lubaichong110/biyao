@@ -11,7 +11,7 @@
 <div class="account-header">
 	<div>
 		<a href="http://www.biyao.com/home/index.html"></a>
-		<p>欢迎来到必要，请<span class="account-login" style="cursor: pointer;">登录</span>|<span class="account-regist">注册</span></p>
+		<p>欢迎来到必要，请<span class="account-login" style="cursor: pointer;">登录</span> | <span class="account-regist">注册</span></p>
 	</div>
 </div>
 	
@@ -22,7 +22,7 @@
 		<li><input type="text" name="userName" id="userName" maxlength="11" placeholder="请输入手机号"><i class="account-error"></i></li>
 		<li class="account-imgCode">
 			<input type="text" name="imgCode" id="imgCode" maxlength="4" placeholder="请输入图中验证码">
-			<img src="../img/yz.png">
+			<div id="container"></div>
 			<span>看不清<br>换一张</span>
 			<i class="account-error"></i>
 		</li>
@@ -34,7 +34,7 @@
 		<li><input type="password" name="password" id="password" maxlength="32" placeholder="请输入6-32位登录密码"><i class="account-error"></i></li>
 		<li><input type="password" name="repeatPassword" id="repeatPassword" maxlength="32" placeholder="请再次输入登录密码"><i class="account-error"></i></li>
 		<li class="regist-agree">
-			<span><b class="regist-yes"></b>我已阅读并同意</span>
+			<span><input type="checkbox" checked="checked" class="regist-yes" />我已阅读并同意</span>
 			<a href="http://static1.biyao.com/pc/www/html/xieyi.html" target="_blank">《必要服务协议》</a>
 		</li>
 		<li class="account-prompt"></li>
@@ -43,10 +43,5 @@
 </div>
 <div class="bottom"></div>
 	</body>
-	<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-         $(function(){
-             $(".bottom").load("../data/data.html footer");
-         })
-	</script>
+	<script src="../js/require.js" defer async="true" data-main = "../js/main_register" type="text/javascript" charset="utf-8"></script>
 </html>

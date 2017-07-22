@@ -531,7 +531,15 @@ a:hover {
           display: inline-block;
           margin: 0 10px; }
 
+.nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
 .nav {
+  float: left;
   z-index: 110;
   width: 100%;
   background: #fff;

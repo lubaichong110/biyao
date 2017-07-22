@@ -414,6 +414,7 @@ $width : 1080px;
     }    
 }
 
+
 .footer{
     width: 100%;
     margin-top: 60px;
@@ -546,8 +547,21 @@ $width : 1080px;
     }
     
 }
+.nav:after {
 
+content: ".";
+
+display: block;
+
+height: 0;
+
+clear: both;
+
+visibility: hidden;
+
+}
 .nav{
+    float:left;
     z-index: 110;
     width: 100%;
     background: #fff;
