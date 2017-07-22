@@ -8,21 +8,18 @@ require(["jquery","fnMoudle"],function($,fnMoudle){
 	$(function(){
 		$(".code").load("../data/data.html .sharCode",function(){
 			fnMoudle.code();
+			fnMoudle.menu();
 		});
 		$(".top").load("../data/data.html header");
 		$(".nav_fixed").load("../data/data.html .nav");
         $(".bottom").load("../data/data.html footer");
-        fnMoudle.menu();
-        
-
-		
         
         
         var shop_index =0;//男装
         //加载商品列表信息
         $.getJSON("../data/shopList.json",function(res){
         	//console.log(res[0].obj[0].obj[0].info)
-        	var data =res[shop_index]
+        	var data =res[shop_index]//获取男装json数据
         	console.log(data.obj[0].obj.length)
             var str ="";
             for(var i=0;i<data.obj.length;i++){

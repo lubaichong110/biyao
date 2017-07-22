@@ -55,27 +55,29 @@
     .account-main ul .login-auto a {
       float: right;
       color: #07a6df; }
-    .account-main ul .account-imgCode input {
-      height: 17px;
-      width: 160px;
-      padding: 11px 20px;
-      border: 1px solid #e8e8e8;
-      line-height: 17px;
-      font: 14px "Microsoft YaHei";
-      color: #999;
-      background: #fff;
-      outline: none;
-      vertical-align: middle; }
-    .account-main ul .account-imgCode img {
-      width: 120px;
-      height: 45px;
-      margin: 0 15px; }
-    .account-main ul .account-imgCode span {
-      display: inline-block;
-      color: #999;
-      text-decoration: underline;
-      cursor: pointer;
-      vertical-align: middle; }
+    .account-main ul .account-imgCode {
+      display: none; }
+      .account-main ul .account-imgCode input {
+        height: 17px;
+        width: 160px;
+        padding: 11px 20px;
+        border: 1px solid #e8e8e8;
+        line-height: 17px;
+        font: 14px "Microsoft YaHei";
+        color: #999;
+        background: #fff;
+        outline: none;
+        vertical-align: middle; }
+      .account-main ul .account-imgCode img {
+        width: 120px;
+        height: 45px;
+        margin: 0 15px; }
+      .account-main ul .account-imgCode span {
+        display: inline-block;
+        color: #999;
+        text-decoration: underline;
+        cursor: pointer;
+        vertical-align: middle; }
     .account-main ul .account-prompt {
       margin-top: 10px !important;
       padding: 6px 0px;

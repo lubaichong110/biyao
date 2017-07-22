@@ -145,7 +145,7 @@ require(["jquery"],function($){
 			    	//console.log(data[j].obj[i])
 		    	    if(i==0){
 		    	    	str+=`<li>
-	    				<a href="#">
+	    				<a href="http://localhost/JS/biyao/html/shopList.html">
 	    					<i><img src="`+data[j].obj[i].img+`" alt="" /></i>
 	    					<span>`+data[j].obj[i].info+`</span>
 	    				</a>

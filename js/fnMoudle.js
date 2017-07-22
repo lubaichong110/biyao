@@ -1,13 +1,14 @@
 define(function(){
 	function menu(){
 		    //滚动出顶端菜单//回到顶部
-		    
 		    window.onscroll = function(){ 
 				 var t = document.documentElement.scrollTop || document.body.scrollTop; 
 				 //console.log(t)
-				 if(t>100){
+				 if(t>150){
 				 	$(".backTop").css("display","block");
 				 	$(".sharCode li").css("z-index","99")
+				 }else{
+				 	$(".backTop").css("display","none");
 				 }
 				 $(".backTop").click(function(){
 				 	var speed=500;//滑动的速度
@@ -82,19 +83,6 @@ define(function(){
 				 	$(".nav-category .nav-list").css("display","none");
 				 	$(".nav-category p i").css("background","url(../img/categoryDown.png) no-repeat");
 				 })
-				 		    		    //回到顶部特效
-		    $(".app_code").mouseover(function(){
-				 	$(".app_code").css("background","url(/biyao/img/rightBar-codeActive.png) no-repeat")
-				 })
-		    $(".app_code").mouseleave(function(){
-				 	$(".app_code").css("background","url(/biyao/img/rightBar-code.png) no-repeat")
-				 })
-			$(".backTop").mouseover(function(){
-				 	$(".backTop").css("background","url(/biyao/img/rightBar-topActive.png) no-repeat")
-			})
-			$(".backTop").mouseleave(function(){
-				 	$(".backTop").css("background","url(/biyao/img/back_top.png) no-repeat")
-			})
 			}
 		    
 		    }//menu
@@ -124,14 +112,29 @@ define(function(){
 		         })
 		         $(".sharCode").css({
 		         	position: "fixed",
+		         	background: "rgba(0,0,0,0)",
+		         	width:"48px",
+		         	left:"",
+		         	top:"",
 				    right: "30px",
 				    bottom: "100px",
-				    height: "144px",
-		         	top: "",
-				    width: "",
-				    background: ""
+				    zIndex: "101",
+				    height: "144px"
 		         })
 		    })
+							 		    		    //回到顶部特效
+		    $(".app_code").mouseover(function(){
+				 	$(".app_code").css("background","url(/biyao/img/rightBar-codeActive.png) no-repeat")
+				 })
+		    $(".app_code").mouseleave(function(){
+				 	$(".app_code").css("background","url(/biyao/img/rightBar-code.png) no-repeat")
+				 })
+			$(".backTop").mouseover(function(){
+				 	$(".backTop").css("background","url(/biyao/img/rightBar-topActive.png) no-repeat")
+			})
+			$(".backTop").mouseleave(function(){
+				 	$(".backTop").css("background","url(/biyao/img/back_top.png) no-repeat")
+			})
 		    }
 		    return {
 		    	menu : menu,
