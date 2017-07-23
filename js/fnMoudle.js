@@ -124,20 +124,74 @@ define(function(){
 		    })
 							 		    		    //回到顶部特效
 		    $(".app_code").mouseover(function(){
-				 	$(".app_code").css("background","url(/biyao/img/rightBar-codeActive.png) no-repeat")
+				 	$(".app_code").css("background","url(../img/rightBar-codeActive.png) no-repeat")
 				 })
 		    $(".app_code").mouseleave(function(){
-				 	$(".app_code").css("background","url(/biyao/img/rightBar-code.png) no-repeat")
+				 	$(".app_code").css("background","url(../img/rightBar-code.png) no-repeat")
 				 })
 			$(".backTop").mouseover(function(){
-				 	$(".backTop").css("background","url(/biyao/img/rightBar-topActive.png) no-repeat")
+				 	$(".backTop").css("background","url(../img/rightBar-topActive.png) no-repeat")
 			})
 			$(".backTop").mouseleave(function(){
-				 	$(".backTop").css("background","url(/biyao/img/back_top.png) no-repeat")
+				 	$(".backTop").css("background","url(../img/back_top.png) no-repeat")
 			})
 		    }
+		    
+		    //接收cookie
+		    function logStatus(){
+		    	
+		    	function convertStrToObj(str){
+				if(!str){ //如果是空字符串
+					return {}; //返回空对象
+				}
+				var users = str.split(":");
+				var obj = {};
+				for(var i = 0; i < users.length; i ++){
+					var userData = users[i].split(",");
+					obj[userData[0]] = userData[1];
+				}
+				return obj;
+			    }
+		    	
+				//获取到cookie中的用户信息
+				var users = $.cookie("loginedUsers",{path:"/biyao"}) ? $.cookie("loginedUsers",{path:"/"}) : "";
+				
+				//将字符串转为对象
+				//users = convertStrToObj(users);
+				console.log(users)
+                //获取用户输入的用户名和密码
+                if(users){
+                	$(".user-out").css({
+                		width:130,
+                		textAlign:"center"
+                	})
+                	var str=`
+                	<div>
+					<i></i>
+					<ul>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="#">个人中心</a></li>
+						<li><a href="#">退出登录</a></li>
+					</ul>
+				</div>`
+                	$(".user-out").html(str+users+"<span></span><b></b>");
+                	$(".user-out").mouseover(function(){
+                		$(".user-out div").css("display","block");
+                	})
+                	$(".user-out").mouseleave(function(){
+                		$(".user-out div").css("display","none");
+                	})
+                	//退出登录
+                	$(".user-out div a").eq(2).click(function(){
+                		$.cookie("loginedUsers",null,{path:"/"});
+                		window.location.href = "http://localhost/JS/biyao/index.html";
+                	})
+                }
+				
+		   }
 		    return {
 		    	menu : menu,
-		    	code : code
+		    	code : code,
+		    	logStatus : logStatus
 		    }
 })

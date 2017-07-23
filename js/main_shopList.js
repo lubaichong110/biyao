@@ -1,16 +1,20 @@
 require.config({//配置main_index.js所依赖的模块
 	paths:{
 		"jquery":"jquery-1.11.3",
-		"fnMoudle":"fnMoudle"
+		"fnMoudle":"fnMoudle",
+		"cookie":"jquery.cookie"
 	}
 })
-require(["jquery","fnMoudle"],function($,fnMoudle){
+require(["jquery"],function($){
+	require(["cookie","fnMoudle"],function(cookie,fnMoudle){
 	$(function(){
 		$(".code").load("../data/data.html .sharCode",function(){
 			fnMoudle.code();
 			fnMoudle.menu();
 		});
-		$(".top").load("../data/data.html header");
+		$(".top").load("../data/data.html header",function(){
+			fnMoudle.logStatus();
+		});
 		$(".nav_fixed").load("../data/data.html .nav");
         $(".bottom").load("../data/data.html footer");
         
@@ -34,7 +38,7 @@ require(["jquery","fnMoudle"],function($,fnMoudle){
             	           
             	           for(var j=0;j<data.obj[i].obj.length;j++){
             	           	str+=`<li>
-								<a href="#">
+								<a href='http://localhost/JS/biyao/html/products.html'>
 									<i><img src="`+data.obj[i].obj[j].img+`"/></i>
 									<dl>
 										<dt>`+data.obj[i].obj[j].info+`</dt>
@@ -65,10 +69,8 @@ require(["jquery","fnMoudle"],function($,fnMoudle){
         	   }
 	            
         })
-            
-        	
-        
-        
-        
+
 	})//$
+	})
+
 })

@@ -1,12 +1,15 @@
 require.config({//配置main_index.js所依赖的模块
 	paths:{
 		"jquery":"jquery-1.11.3",
-		"swiper":"swiper-3.4.2.jquery.min"
+		"swiper":"swiper-3.4.2.jquery.min",
+		"cookie":"jquery.cookie",
+		"fnMoudle":"fnMoudle"
 	}
 })
 require(["jquery"],function($){
-	require(["swiper"],function(Swiper){
+	require(["swiper","cookie","fnMoudle"],function(Swiper,cookie,fnMoudle){
 			$(function(){
+				fnMoudle.logStatus();
             var swiper = new Swiper('.swiper-container', {
 		        pagination: '.swiper-pagination',
 		        nextButton: '.swiper-button-next',

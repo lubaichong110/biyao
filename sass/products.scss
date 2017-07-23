@@ -43,7 +43,7 @@ visibility: hidden;
                         position: absolute;
                         bottom: 10px;
                         left: 10px;
-                        display: block;
+                        display: none;
                         height: 40px;
                         width: 120px;
                         border-radius: 3px;
@@ -249,10 +249,18 @@ visibility: hidden;
                                 width: 400px;
                                 ul{
                                     width: 406px;
+                                    li:nth-of-type(1){
+                                        border: 1px solid rgb(82, 54, 105);
+                                        em:nth-of-type(1){
+                                        display: block;
+                                        }
+                                    }
+                                    
                                     li{
                                         position: relative;
                                         display: inline-block;
                                         margin: 0 6px 15px 0;
+                                        border: 1px solid #ccc;
                                        img{
                                             width: 50px;
                                             height: 50px;

@@ -1,11 +1,12 @@
 require.config({//配置main_index.js所依赖的模块
 	paths:{
 		"jquery":"jquery-1.11.3",
-		"cookie":"jquery.cookie"
+		"cookie":"jquery.cookie",
+		"fnMoudle":"fnMoudle"
 	}
 })
 require(["jquery"],function($){//先加载$，再加载cookie
-	require(["cookie"],function(cookie){
+	require(["cookie","fnMoudle"],function(cookie,fnMoudle){
 		$(function(){
              $(".bottom").load("../data/data.html footer");
              //获取cookie
@@ -89,9 +90,11 @@ require(["jquery"],function($){//先加载$，再加载cookie
 				console.log(users)
 				if(users[username] == pwd){
 					//登录成功
-					$.cookie("loginedUsers",username,7);
+					$.cookie("loginedUsers",{path:""});
+					$.cookie("loginedUsers",username,{expires:7,path:"/"});
 					console.log("登录成功!");
-					location.href = "http://localhost/JS/biyao/index.html";
+					window.location.href = "http://localhost/JS/biyao/index.html";
+					
 				}else{
 					//登录失败
 					alert("用户名和密码不匹配，请确认后重试！");

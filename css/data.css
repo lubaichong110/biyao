@@ -285,12 +285,54 @@ a:hover {
     .header .clearfix .header-user {
       float: right;
       height: 30px; }
+      .header .clearfix .header-user .user-out:hover span {
+        background: url(../img/comSprite.png) 0 -88px no-repeat; }
       .header .clearfix .header-user .user-out {
+        position: relative;
         display: inline-block;
         height: 30px;
         line-height: 30px;
         color: #cdcdcd;
         vertical-align: middle; }
+        .header .clearfix .header-user .user-out span {
+          display: inline-block;
+          width: 9px;
+          height: 4px;
+          margin-left: 10px;
+          background: url(../img/comSprite.png) 0 -102px no-repeat; }
+        .header .clearfix .header-user .user-out div {
+          position: absolute;
+          top: 25px;
+          left: -33px;
+          z-index: 115;
+          display: none; }
+          .header .clearfix .header-user .user-out div i {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: 30px;
+            height: 15px;
+            margin: 0 auto;
+            background: url(../img/triangle.png) no-repeat;
+            background-size: 100% 100%; }
+          .header .clearfix .header-user .user-out div ul {
+            min-width: 136px;
+            padding: 10px 0;
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.05); }
+            .header .clearfix .header-user .user-out div ul li {
+              text-align: center; }
+              .header .clearfix .header-user .user-out div ul li a {
+                display: block;
+                height: 40px;
+                padding: 0 15px;
+                line-height: 40px;
+                font-size: 16px;
+                color: #333; }
+              .header .clearfix .header-user .user-out div ul li a:hover {
+                color: #333;
+                background: #f0f0f0; }
         .header .clearfix .header-user .user-out a:hover {
           color: #fff; }
         .header .clearfix .header-user .user-out .user-login {
