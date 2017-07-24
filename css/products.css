@@ -192,49 +192,69 @@
         .section .section-editor .editor-panel .panel-main .panel-specs {
           margin-top: 15px;
           overflow: visible; }
-          .section .section-editor .editor-panel .panel-main .panel-specs ul li {
-            overflow: hidden; }
-            .section .section-editor .editor-panel .panel-main .panel-specs ul li span {
-              float: left;
-              width: 65px;
-              height: 35px;
-              line-height: 35px;
-              font-size: 14px; }
-            .section .section-editor .editor-panel .panel-main .panel-specs ul li div {
-              float: right;
-              width: 400px; }
-              .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul {
-                width: 406px; }
-                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li:nth-of-type(1) {
-                  border: 1px solid #523669; }
-                  .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li:nth-of-type(1) em:nth-of-type(1) {
-                    display: block; }
-                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li {
-                  position: relative;
-                  display: inline-block;
-                  margin: 0 6px 15px 0;
-                  border: 1px solid #ccc; }
-                  .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li img {
-                    width: 50px;
-                    height: 50px; }
-                  .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li em {
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    display: none;
-                    width: 22px;
-                    height: 22px;
-                    background: url(../img/specs-active.png) no-repeat; }
-                  .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li i {
-                    position: absolute;
-                    top: 48px;
-                    left: 15px;
-                    z-index: 3;
-                    display: block;
-                    width: 24px;
-                    height: 10px;
-                    background: url(../img/triangle.png) no-repeat;
-                    background-size: 100% 100%; }
+          .section .section-editor .editor-panel .panel-main .panel-specs ul li:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+          .section .section-editor .editor-panel .panel-main .panel-specs ul li span {
+            float: left;
+            width: 65px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px; }
+          .section .section-editor .editor-panel .panel-main .panel-specs ul li div {
+            float: right;
+            width: 400px; }
+            .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul {
+              width: 406px; }
+              .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li:nth-of-type(1) {
+                border: 1px solid #523669; }
+                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li:nth-of-type(1) em:nth-of-type(1) {
+                  display: block; }
+              .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul .color_active {
+                border: 1px solid #523669; }
+              .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul .size_active {
+                border: 1px solid #523669; }
+              .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li {
+                position: relative;
+                display: inline-block;
+                margin: 0 6px 15px 0;
+                border: 1px solid #ccc; }
+                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li img {
+                  width: 50px;
+                  height: 50px; }
+                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li em {
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  display: none;
+                  width: 22px;
+                  height: 22px;
+                  background: url(../img/specs-active.png) no-repeat; }
+                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li i {
+                  position: absolute;
+                  top: 48px;
+                  left: 15px;
+                  z-index: 3;
+                  display: block;
+                  width: 24px;
+                  height: 10px;
+                  background: url(../img/triangle.png) no-repeat;
+                  background-size: 100% 100%; }
+                .section .section-editor .editor-panel .panel-main .panel-specs ul li div ul li .choose_color {
+                  position: absolute;
+                  display: none;
+                  top: 58px;
+                  z-index: 22;
+                  left: -5px;
+                  width: 60px;
+                  padding: 0;
+                  text-align: center;
+                  line-height: 30px;
+                  color: #333;
+                  background: #fff; }
           .section .section-editor .editor-panel .panel-main .panel-specs ul .size {
             overflow: hidden; }
             .section .section-editor .editor-panel .panel-main .panel-specs ul .size span {

@@ -1,0 +1,352 @@
+@import "common";
+body{
+    background: #f9f9f9;
+}
+.nav{
+    width: 100%;
+     background: #f9f9f9;
+    border-bottom: 1px solid #eae4e8;
+    .logo{
+        width: 1200px;
+    margin: 0 auto;
+    padding-top: 27px;
+        .logo_main{
+            margin-bottom: 20px;
+            .log_img{
+                display: inline-block;
+                float: left;
+            }
+            .car_step{
+                float: right;
+                .car_step_img{
+                    background: url(../img/car_steps.png) left center no-repeat;
+                    width: 560px;
+                    height: 20px;
+                    background-position: -30px -23px; 
+                }
+                ul{
+                    margin-top: 3px;
+                    li{
+                        width: 140px;
+                        float: left;
+                        height: 19px;
+                        line-height: 19px;
+                        text-align: center;
+                        color: #d5cdda;
+                    }
+                    li:nth-of-type(1){
+                         color: #724a88;
+                    }
+                }
+            }
+        }
+    }
+
+}
+//neirong
+.main_box{
+    overflow: hidden;
+    width: 100%;
+       .all_choose{
+        background: url(../img/commonSprite.png) no-repeat -20px -80px;
+    }
+    .car_main{
+            width: 1200px;
+            margin: 0 auto;
+        .car_box{
+            overflow: hidden;
+            border-bottom: 1px solid #d5cdda;
+            padding-top: 30px;
+                padding-bottom: 10px !important;
+            line-height: 24px;
+            span{
+                color: #523669;
+                font-size: 18px;
+            }
+        }
+    }
+ 
+    //comment_box
+    .comment_box{
+        height: 17px;
+        padding: 10px 0;
+        overflow: hidden;
+        .comment_left{
+            float: left;
+            height: 37px;
+            overflow: hidden;
+            box-sizing: border-box;
+            ul{
+                li:nth-of-type(1){
+                    width: 180px;
+                    margin-left: 10px;
+                    i{
+                        display: inline-block;
+                        vertical-align: middle;                          
+                        width: 15px;
+                        height: 15px;
+                        background: url(../img/commonSprite.png) no-repeat 0px -80px;
+                    }
+                    span{
+                        display: inline-block;
+                        vertical-align: middle;       
+                    }
+                }
+                li:nth-of-type(2){
+                    width: 360px;
+                }
+                li{
+                    float: left;
+                    line-height: 17px;
+                }
+            }
+        }
+        .comment_right{
+            float: right;
+            ul{
+                li{
+                    float: left;
+                    width: 115px;
+                    line-height: 17px;
+                    text-align: center;
+                }
+                li:nth-of-type(3){
+                    width: 240px;
+                }
+                li:nth-of-type(5){
+                    width: 60px;
+                }
+            }
+        }
+    }
+    
+    .shopping_box{
+        line-height: 35px;
+        background-color: #EEEEEE;
+        box-sizing: border-box;
+        overflow: hidden;
+        .order_title{
+            float: left;
+            i{
+                display: inline-block;
+                vertical-align: middle;                          
+                width: 15px;
+                height: 15px;
+                background: url(../img/commonSprite.png) no-repeat 0px -80px;
+            }
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .order_main{
+            background: #Fff;
+            width: 100%;
+             color: rgb(51, 51, 51);
+            line-height: 20px;
+            tr{
+                td{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                      text-align: left;
+                    border-bottom: 1px dotted #ccc;
+                }
+                td:nth-of-type(1){
+                    width: 30px;
+                    padding-left: 10px;
+                    i{
+                        display: inline-block;
+                        vertical-align: middle;                          
+                        width: 15px;
+                        height: 15px;
+                        background: url(../img/commonSprite.png) no-repeat 0px -80px;
+                    }
+                }
+                td:nth-of-type(2){
+                    width: 130px;
+                    span{
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        img{
+                            width: 100px;
+                        height: 100px;
+                        }
+                    }
+                }
+                td:nth-of-type(3){
+                    a{color: #523669;}
+                    div{
+                      color: #999 !important;
+                         margin-top: 5px !important;
+                         width: 300px;
+                    }
+                }
+                td:nth-of-type(4){
+                    color: #f49f26;
+                    width: 10%;
+                    text-align: -webkit-center;
+                }
+                td:nth-of-type(5){
+                    width: 10%;
+                    text-align: -webkit-center;
+                    i{
+                        display: inline-block;
+                        vertical-align: middle;
+                        float: left;
+                        width: 27px;
+                        height: 30px;
+                        border: 1px solid #ccc;
+                       
+                    }
+                    i:nth-of-type(1){
+                         border-right: none;
+                         background: url(../img/commonSprite.png) no-repeat 5px -40px;
+                    }
+                    i:nth-of-type(2){
+                        border-left: none;
+                         background: url(../img/commonSprite.png) no-repeat -16px -40px;
+                    }
+                    input{
+                        float: left;
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 4px;
+                        width: 40px;
+                        background-color: #fff;
+                        color: #523669;
+                    }
+                }
+                td:nth-of-type(6){
+                    width: 20%;
+                    color: #666;
+                    text-align: -webkit-center;
+                    
+                }
+                td:nth-of-type(7){
+                    width: 10%;
+                    text-align: -webkit-center;
+                    color: #f49f26;
+                }
+                td:nth-of-type(8){
+                    width: 5%;
+                    text-align: -webkit-center;
+                    a{
+                        width: 12px;
+                        height: 12px;
+                        background: url(../img/a_delete.png) -10px -32px no-repeat;
+                        display: block;
+                    }
+                    a:hover{
+                        background: url(../img/a_delete.png) -10px -10px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    
+    .firm_box{
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        padding-top: 10px !important;
+        .firm_top{
+            overflow: hidden;
+            line-height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            .f_l{
+                 float: left;
+                 i{
+                     display: inline-block;
+                    vertical-align: middle;                          
+                    width: 15px;
+                    height: 15px;
+                    background: url(../img/commonSprite.png) no-repeat 0px -80px;
+                 }   
+                 span{
+                    display: inline-block;
+                    vertical-align: middle;
+                 }
+                 a{
+                     display: inline-block;
+                    vertical-align: middle;
+                    color: #07a6df;
+                 }
+            }
+            .f_r{
+                font-size: 14px;
+                float: right;
+                span{
+                    color: #f49f26;
+                }
+            }
+            .account{
+                    font-size: 14px;
+                    color: #666;
+                    margin-right: 30px;
+                    float: right;
+                em{
+                     font-size: 14px;
+                    color: #f49f26;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+            }
+        }
+        .firm_bottom{
+            line-height: 30px;
+            padding: 0 10px;
+            div{
+                float: right;
+                span{
+                    color: #f49f26;
+                    width: 80px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+            .tally_box{
+            height: 50px;
+            line-height: 50px;
+            border-top: 1px solid #d5cdda;
+            background-color: #eeecef;
+            padding-left: 10px;
+            .goonShop{
+                    width: 100px;
+                    height: 33px;
+                    background: #724A88;
+                    line-height: 33px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 16px;
+                    display: inline-block;
+                    vertical-align: middle;
+            }
+            .js{
+                width: 85px;
+                height: 33px;
+                line-height: 33px;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+                background: #f49f26;
+                float: right;
+                margin: 10px 10px 0 30px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            p{
+                color: #666;
+                height: 48px;
+                float: right;
+                span{
+                    color: #f49f26;
+                    font-size: 20px;
+                }
+            }
+        }
+}

@@ -1,4 +1,5 @@
 define(function(){
+
 	function menu(){
 		    //滚动出顶端菜单//回到顶部
 		    window.onscroll = function(){ 
@@ -158,7 +159,7 @@ define(function(){
 				
 				//将字符串转为对象
 				//users = convertStrToObj(users);
-				console.log(users)
+				//console.log(users)
                 //获取用户输入的用户名和密码
                 if(users){
                 	$(".user-out").css({
@@ -189,6 +190,12 @@ define(function(){
                 }
 				
 		   }
+		    
+		    
+		    
+		    
+		    
+		    
 		    return {
 		    	menu : menu,
 		    	code : code,

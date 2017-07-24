@@ -235,8 +235,14 @@ visibility: hidden;
                     margin-top: 15px;
                     overflow: visible;
                     ul{
+                        li:after {
+                        content: ".";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                        }
                         li{
-                            overflow: hidden;
                             span{
                                 float: left;
                                 width: 65px;
@@ -255,7 +261,12 @@ visibility: hidden;
                                         display: block;
                                         }
                                     }
-                                    
+                                    .color_active{
+                                        border: 1px solid rgb(82, 54, 105);
+                                    }
+                                    .size_active{
+                                        border: 1px solid #523669;
+                                    }
                                     li{
                                         position: relative;
                                         display: inline-block;
@@ -284,6 +295,19 @@ visibility: hidden;
                                             height: 10px;
                                             background: url(../img/triangle.png) no-repeat;
                                             background-size: 100% 100%;
+                                        }
+                                        .choose_color{
+                                            position: absolute;
+                                            display: none;
+                                            top: 58px;
+                                            z-index: 22;
+                                            left: -5px;
+                                            width: 60px;
+                                            padding: 0;
+                                            text-align: center;
+                                            line-height: 30px;
+                                            color: #333;
+                                            background: #fff;
                                         }
                                     }
                                 }
