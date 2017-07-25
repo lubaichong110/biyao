@@ -167,7 +167,18 @@ require(["jquery"],function($){
 	    	    </div>
 		    	`
 		    }
-		    $(".main").append(str)
+		    $(".main").append(str);
+		    
+		    //判断加载什么类型的列表页
+		    for(let i=0;i<$(".category_list").length;i++){
+		    	for(let j=0;j<$(".category_list li").eq(i).length;j++){
+		    		$(".category_list").eq(i).eq(j).click(function(){
+		    			$.cookie("shop_index",i-1);
+		    			location.href="http://localhost/JS/biyao/html/shopList.html";
+		    		})
+		    	}
+		    }
+		    
           })
 		    var a=1;
 		  //滚到到一定高度再加载一堆

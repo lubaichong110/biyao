@@ -18,8 +18,12 @@ require(["jquery"],function($){
 		$(".nav_fixed").load("../data/data.html .nav");
         $(".bottom").load("../data/data.html footer");
         
-        
-        var shop_index =0;//男装
+        //接收要加载那块json数据
+        var shop_index =$.cookie("shop_index");//男装
+        if(shop_index<0){
+        	shop_index=0;
+        }
+        console.log(shop_index)
         //加载商品列表信息
         $.getJSON("../data/shopList.json",function(res){
         	//console.log(res[0].obj[0].obj[0].info)

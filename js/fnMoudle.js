@@ -189,6 +189,42 @@ define(function(){
                 	})
                 }
 				
+				function convertCartStrToObj(cartStr){
+				//如果是空字符串，即没有购物车信息，那么购物车为空，直接返回一个空对象
+				if(!cartStr){
+					return {};
+				}
+				var goods = cartStr.split(":");
+				var obj = {};
+				for(var i = 0; i < goods.length; i ++){
+					var data = goods[i].split(",");
+					//以商品的id为健，商品的其他信息为值，这个值也设计为一个对象
+					obj[data[0]] = {
+						name : data[1],
+						price : parseFloat(data[2]),
+						num : parseInt(data[3]),
+						src : data[4],
+						color :data[5]
+					}
+				}
+				return obj;
+			}
+			
+				
+			//加载购物车中的信息（使商品页与购物车页中的购物车数量同步）
+			function loadCart(){
+				var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+					var cartObj = convertCartStrToObj(cartStr);
+					//获取到购物车中所有商品的数量
+					var total = 0;
+					for(var id in cartObj){
+						total += cartObj[id].num;
+					}
+					$("#shopCar").html(total);
+					
+			}
+			loadCart()	
+				
 		   }
 		    
 		    

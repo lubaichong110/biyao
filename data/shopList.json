@@ -3,6 +3,7 @@
     "name":"男装",
     "obj":[{  "name":"POLO衫",
               "obj":[{
+              "id":1,
 				    "img":"../img/shop1_1_ (1).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
@@ -536,57 +537,47 @@
     "name":"女装",
     "obj":[{  "name":"裙子",
               "obj":[{
-				    "img":"../img/shop1_1_ (1).jpg",
+				    "img":"../img/shop2_1_ (1).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 			    {
-				    "img":"../img/shop1_1_ (2).jpg",
+				    "img":"../img/shop2_1_ (2).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (3).jpg",
+				    "img":"../img/shop2_1_ (3).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (4).jpg",
+				    "img":"../img/shop2_1_ (4).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (5).jpg",
+				    "img":"../img/shop2_1_ (5).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (6).jpg",
+				    "img":"../img/shop2_1_ (6).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (7).jpg",
+				    "img":"../img/shop2_1_ (7).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (8).jpg",
+				    "img":"../img/shop2_1_ (8).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				},
 				{
-				    "img":"../img/shop1_1_ (9).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
-				},
-				{
-				    "img":"../img/shop1_1_ (10).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
-				},
-				{
-				    "img":"../img/shop1_1_ (11).jpg",
+				    "img":"../img/shop2_1_ (9).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
 					"price":"¥188"
 				}]
