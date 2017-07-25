@@ -226,7 +226,17 @@ define(function(){
 			loadCart()	
 				
 		   }
-		    
+		    //添加点击事件
+		    function tiaozhuan(){
+		    	$(".nav-main p a:first-child").click(function(){
+		    		$.cookie("shop_index",0);
+		    		location.href="http://localhost/JS/biyao/html/shopList.html";
+		    	})
+		    	$(".nav-main p a:last-child").click(function(){
+		    		$.cookie("shop_index",1);
+		    		location.href="http://localhost/JS/biyao/html/shopList.html";
+		    	})
+		    }
 		    
 		    
 		    
@@ -235,6 +245,7 @@ define(function(){
 		    return {
 		    	menu : menu,
 		    	code : code,
-		    	logStatus : logStatus
+		    	logStatus : logStatus,
+		    	tiaozhuan : tiaozhuan
 		    }
 })

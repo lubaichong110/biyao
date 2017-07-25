@@ -181,7 +181,7 @@ require(["jquery"],function($){//先加载$，再加载cookie
 					//设置用户信息cookie
 					$.cookie("registerUsers",userStr,7);
 					console.log(decodeURIComponent(document.cookie))
-					alert("注册成功！");
+					location.href="http://localhost/JS/biyao/html/login.html";
 				}
 			 }
      	})

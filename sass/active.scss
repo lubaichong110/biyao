@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import "common";
+.nav_fixed:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+.section_bread {
+       width: 1080px;
+        margin: 20px auto;
+        overflow: hidden;
+        color: #333;
+        a{
+           color: #333;  
+        }
+        span{
+            color: #808080;
+        }
+    }
+.newProduct{
+    width: 1080px;
+    margin: 20px auto 0;
+    overflow: hidden;
+    p{
+        margin: 10px 0 20px;
+        color: #333;
+        font-size: 24px;
+        text-align: center;
+    }
+    ul{
+        margin-top: 60px;
+        li{
+             margin-bottom: 96px;
+            text-align: center;
+            .newTitle{
+                display: inline-block;
+                padding: 0 60px;
+                border-top: 1px solid #ccc;
+                b{
+                    position: relative;
+                    top: -18px;
+                    display: block;
+                    padding: 0 20px;
+                    font-weight: normal;
+                    font-size: 24px;
+                    color: #808080;
+                    background: #f9f9f9;
+                }
+            }
+            a{
+                display: block;
+                margin-bottom: 20px;
+                overflow: hidden;
+                dl{
+                    float: left;
+                    width: 365px;
+                    height: 347px;
+                    padding: 0 20px;
+                    background: #fff;
+                    overflow: hidden;
+                    dt{
+                        margin-top: 120px;
+                        h2{
+                            margin-bottom: 20px;
+                            font-weight: normal;
+                            font-size: 24px;
+                            color: #333;
+                        }
+                        h3{
+                            width: 260px;
+                            margin: 0 auto;
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #f2f2f2;
+                            font-weight: normal;
+                            color: #ff3333;
+                            font-size: 24px;
+                        }
+                    }
+                    dd{
+                        margin-top: 20px;
+                        text-align: center;
+                        font-size: 16px;
+                        color: #808080;
+                    }
+                }
+                img{
+                    float: left;
+                    width: 675px;
+                    height: 347px;
+                    vertical-align: middle;
+                    border: 0; 
+                }
+            }
+        }
+    }
+}
