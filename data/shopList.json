@@ -4,24 +4,61 @@
     "obj":[{  "name":"POLO衫",
               "obj":[{
               "id":1,
+              "show_img":["../img/shop1_1_ (1)_1.jpg",
+                        "../img/shop1_1_ (1)_2.jpg",
+                        "../img/shop1_1_ (1)_3.jpg",
+                        "../img/shop1_1_ (1)_4.jpg",
+                        "../img/shop1_1_ (1)_5.jpg"
+                        ],
+              "color_img":["../img/shop1_1_ (1)_a.jpg",
+                        "../img/shop1_1_ (1)_b.jpg",
+                        "../img/shop1_1_ (1)_b.jpg",
+                        "../img/shop1_1_ (1)_d.jpg",
+                        "../img/shop1_1_ (1)_e.jpg"
+                        ],
+              "size":["S","M","L","XL","XXL"],
+              "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop1_1_ (1).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+					"price":"188"
 				},
 			    {
+			    "id":2,
+              "show_img":["../img/shop1_1_ (2)_1.jpg",
+                        "../img/shop1_1_ (2)_2.jpg",
+                        "../img/shop1_1_ (2)_3.jpg",
+                        "../img/shop1_1_ (2)_4.jpg",
+                        "../img/shop1_1_ (2)_5.jpg"
+                        ],
+              "color_img":["../img/shop1_1_ (2)_a.jpg",
+                        "../img/shop1_1_ (2)_b.jpg"
+                        ],
+              "size":["S","M","L","XL","XXL"],
+              "sub_info":"麻质干爽透气和丝光棉质舒适柔顺的交融 经典蓝白间条犹如来自海洋的清风",
 				    "img":"../img/shop1_1_ (2).jpg",
 					"info":"SofTAL免烫POLO衫",
-					"price":"¥189"
+					"price":"249"
 				},
 				{
+				  "id":3,
+              "show_img":["../img/shop1_1_ (3)_1.jpg",
+                        "../img/shop1_1_ (3)_2.jpg",
+                        "../img/shop1_1_ (3)_3.jpg",
+                        "../img/shop1_1_ (3)_4.jpg",
+                        "../img/shop1_1_ (3)_5.jpg"
+                        ],
+              "color_img":["../img/shop1_1_ (3)_a.jpg"
+                        ],
+              "size":["M","L","XL","XXL"],
+              "sub_info":"时尚迷彩元素，数码印花高清呈现；100%棉经典珠地结够，棉感强烈",
 				    "img":"../img/shop1_1_ (3).jpg",
-					"info":"纯棉珠地净色Polo",
-					"price":"¥188"
+					"info":"迷彩印花纯棉珠地男POLO",
+					"price":"189"
 				},
 				{
 				    "img":"../img/shop1_1_ (4).jpg",
 					"info":"140S/3丝光纯棉珠地POLO",
-					"price":"¥279"
+					"price":"279"
 				},
 				{
 				    "img":"../img/shop1_1_ (5).jpg",
@@ -537,24 +574,57 @@
     "name":"女装",
     "obj":[{  "name":"裙子",
               "obj":[{
+              "id":101,
+              "show_img":["../img/shop2_1_(1)_1.jpg",
+                        "../img/shop2_1_(1)_2.jpg",
+                        "../img/shop2_1_(1)_3.jpg",
+                        "../img/shop2_1_(1)_4.jpg",
+                        "../img/shop2_1_(1)_5.jpg"
+                        ],
+              "color_img":["../img/shop2_1_(1)_a.jpg"
+                        ],
+              "size":["S","M","L","XL","XXL"],
+              "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (1).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+					"price":"188"
 				},
 			    {
+			    "id":102,
+              "show_img":["../img/shop2_1_ (2)_1.jpg",
+                        "../img/shop2_1_ (2)_2.jpg",
+                        "../img/shop2_1_ (2)_3.jpg",
+                        "../img/shop2_1_ (2)_4.jpg",
+                        "../img/shop2_1_ (2)_5.jpg"
+                        ],
+              "color_img":["../img/shop2_1_ (2)_a.jpg"
+                        ],
+              "size":["S","M","L","XL"],
+              "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (2).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+					"price":"188"
 				},
 				{
+				"id":103,
+              "show_img":["../img/shop2_1_(3)_1.jpg",
+                        "../img/shop2_1_(3)_2.jpg",
+                        "../img/shop2_1_(3)_3.jpg",
+                        "../img/shop2_1_(3)_4.jpg",
+                        "../img/shop2_1_(3)_5.jpg"
+                        ],
+              "color_img":["../img/shop2_1_(3)_a.jpg"
+                        ],
+              "size":["S","M","L","XL"],
+              "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (3).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+					"price":"188"
 				},
 				{
 				    "img":"../img/shop2_1_ (4).jpg",
 					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+					"price":"188"
 				},
 				{
 				    "img":"../img/shop2_1_ (5).jpg",

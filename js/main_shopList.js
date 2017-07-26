@@ -41,8 +41,8 @@ require(["jquery"],function($){
 						<ul>`
             	           
             	           for(var j=0;j<data.obj[i].obj.length;j++){
-            	           	str+=`<li>
-								<a href='http://localhost/JS/biyao/html/products.html'>
+            	           	str+=`<li class="goods" data-good-id="`+data.obj[i].obj[j].id+`">
+								<a>
 									<i><img src="`+data.obj[i].obj[j].img+`"/></i>
 									<dl>
 										<dt>`+data.obj[i].obj[j].info+`</dt>
@@ -57,10 +57,21 @@ require(["jquery"],function($){
 				</ul>`
             }
             $(".shop-list").append(str)
+            
+            //给商品添加点击事件,跳转到详情页(把信息存储到cookie里面)
+            for(var i=0;i<$(".goods").length;i++){
+            	$(".goods").eq(i).click(function(){
+            		$.cookie("product",$(this).attr("data-good-id"));
+            		//console.log($(this).attr("data-good-id"))
+            		location.href="http://localhost/JS/biyao/html/products.html"
+            	})
+            }
+            
+            
+            //点击跳转到对应div的高度
             	var t = document.documentElement.scrollTop || document.body.scrollTop;
                 var $shopLi =$(".cateBread ul li");
 	        	var $shopUl =$(".shop_ul");
-        	
         		for(let i=0;i<$shopLi.length;i++){
 	        		$($shopLi[i]).click(function(){
 	        			console.log($shopUl)

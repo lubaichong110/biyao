@@ -19,109 +19,174 @@ require(["jquery"],function($){
         $(".bottom").load("../data/data.html footer");
         
         $(function(){
-        var $lis =$(".editor-picture ul li");//li
-        for(let i=0;i<$lis.length;i++){
-        	$lis.eq(i).click(function(){
-        		$(".editor-picture p img").attr({src:"../img/shop1_1_ (1)_"+(i+1)+".jpg"});
+        	var shop_index =$.cookie("shop_index")
+        	if(shop_index<0){
+        	   shop_index=0;
+    		}
+        	var product_id= $.cookie("product");//获取要加载的商品id
+        	$.getJSON("../data/shopList.json",function(res){
+        		var data =res[shop_index].obj;//获取商品类型数据
+        		var str ="";
+        		for(var i=0;i<data.length;i++){
+        		    for(var j=0;j<data[i].obj.length;j++){
+        		    	if(data[i].obj[j].id==product_id){//获取到对应id的商品信息
+        		    		console.log(data[i].obj[j].show_img)
+        		    		//shangfang>
+        		    		$(".bread-title").html("&gt;&nbsp;"+data[i].obj[j].info)
+        		    		//主标题信息
+        		    		var str_id=`
+        		    		<h1 data-good-id="`+data[i].obj[j].id+`">`+data[i].obj[j].info+`</h1>
+        		    		<p></p>
+        		    		`
+        		    		$(".panel-top").append(str_id);
+        		    		//大图片
+        		    		$(".editor-picture p img").attr("src",data[i].obj[j].show_img[0]);
+        		    		//副标题信息
+        		    		$(".panel-top p").html(data[i].obj[j].sub_info);
+        		    		//价格
+        		    		$(".panel-money i").html(parseInt(data[i].obj[j].price))
+        		    		//show_img
+        		    		var str_show="";
+        		    		$.each(data[i].obj[j].show_img, function(a,b) {
+        		    			str_show+=`
+        		    			    <li><img src="`+b+`" alt="" /></li>
+        		    			`
+        		    		})
+        		    		$(".show_img").append(str_show);
+      		    		    //color_img
+      		    		    var str_color="";
+        		    		$.each(data[i].obj[j].color_img,function(a,b){
+        		    			str_color+=`
+        		    			    <li class="color">
+					    				<img src="`+b+`" alt="" />
+					    			    <em>	</em>
+					    			    <i></i>
+					    			    <div class="choose_color">深灰色</div>
+					    			</li>
+        		    			`
+        		    		})
+        		    		$(".color_div ul").append(str_color);
+        		    		
+        		    		//size
+        		    		var str_size ="";
+        		    		$.each(data[i].obj[j].size,function(a,b){
+        		    			str_size+=`<li >`+b+`<em></em></li>`;
+        		    		})
+        		    		$(".size_div ul").append(str_size);
+        		    		//页面效果加载
+        		    		loadJs();
+        		    	}
+        		    }
+        		}
         	})
-        }
-        //右侧小图
-        var $color =$(".color");
-        for(var i=0;i<$color.length;i++){
         	
-        	$color.eq(i).click(function(){
-        		for(var i=0;i<$color.length;i++){
-        			$color.eq(i).find("em").css("display","none");
-        			$color.eq(i).css({border: "1px solid #ccc"})
-        		}
-        		$(".editor-picture p img").attr({src:$(this).find("img").attr("src")});
-        		$(this).find("em").css("display","block");
-        		$(this).addClass(".color_active")
-        	})
-        	$color.eq(i).mouseover(function(){
-        		$(this).find(".choose_color").css("display","block");
-        	})
-        	$color.eq(i).mouseleave(function(){
-        		$(this).find(".choose_color").css("display","none");
-        	})
-        }
-        //size
-        var $size = $(".size ul li");
-        for(var i=0;i<$size.length;i++){
-        	$size.eq(i).click(function(){
-        		for(var i=0;i<$size.length;i++){
-        			$size.eq(i).find("em").css("display","none");
-        			$size.eq(i).css({border: "1px solid #ccc"})
-        		}
-        		$(this).find("em").css("display","block");
-        		$(this).addClass(".size_active");
-        	})
-        }
-        //-
-        $(".panel-minus").click(function(){
-        	if($(".panel-number").text()>1){
-        		$(".panel-number").text($(".panel-number").text()-1)
+        	function loadJs(){
+        		        var $lis =$(".editor-picture ul li");//li
+				        for(let i=0;i<$lis.length;i++){
+				        	$lis.eq(i).click(function(){
+				        		$(".editor-picture p img").attr({src:$(this).find("img").attr("src")});
+				        	})
+				        }
+				        //右侧小图
+				        var $color =$(".color");
+				        for(var i=0;i<$color.length;i++){
+				        	
+				        	$color.eq(i).click(function(){
+				        		for(var i=0;i<$color.length;i++){
+				        			$color.eq(i).find("em").css("display","none");
+				        			$color.eq(i).css({border: "1px solid #ccc"})
+				        		}
+				        		$(".editor-picture p img").attr({src:$(this).find("img").attr("src")});
+				        		$(this).find("em").css("display","block");
+				        		$(this).addClass(".color_active")
+				        	})
+				        	$color.eq(i).mouseover(function(){
+				        		$(this).find(".choose_color").css("display","block");
+				        	})
+				        	$color.eq(i).mouseleave(function(){
+				        		$(this).find(".choose_color").css("display","none");
+				        	})
+				        }
+				        //size
+				        var $size = $(".size ul li");
+				        for(var i=0;i<$size.length;i++){
+				        	$size.eq(i).click(function(){
+				        		for(var i=0;i<$size.length;i++){
+				        			$size.eq(i).find("em").css("display","none");
+				        			$size.eq(i).css({border: "1px solid #ccc"})
+				        		}
+				        		$(this).find("em").css("display","block");
+				        		$(this).addClass(".size_active");
+				        	})
+				        }
+				        //-
+				        $(".panel-minus").click(function(){
+				        	if($(".panel-number").text()>1){
+				        		$(".panel-number").text($(".panel-number").text()-1)
+				        	}
+				        })
+				        //+
+				        $(".panel-add").click(function(){
+				        	$(".panel-number").text(Number($(".panel-number").text())+1)
+				        })
+				        
+				        
+				        
+				        //购物车提交
+				        $("#addShopCar").click(function(){
+				        	$(".color_active .choose_color").css("display","block");
+				        	var goodId =$(".panel-top h1").attr("data-good-id");
+				        	var goodName =$(".panel-top h1").html();
+				        	var goodColor =""+$(".color .choose_color").html()+"";
+				        	var goodPrice=Number($(".panel-money i").html());
+				        	var goodNum =Number($(".panel-number").text());
+				        	var goodSrc = $(".editor-picture p img").attr("src");
+				        	//获取cookie
+				            var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+				            var cartObj = convertCartStrToObj(cartStr);
+				            console.log(goodColor)
+				            //判断该商品是否已经在购物车中存在
+									if(goodId in cartObj){
+										//如果已存在，那么该商品的数量加1
+										cartObj[goodId].num += 1;
+									}else{
+										//如果不存在，那么将新商品的信息存入
+										cartObj[goodId] = {
+											name : goodName,
+											price : goodPrice,
+											num : goodNum,
+											src : goodSrc,
+											color : goodColor
+										};
+									}
+						    
+				            cartStr = convertObjToCartStr(cartObj);
+				            console.log(cartStr)
+				            $.cookie("cart",cartStr,{expires : 7,path:"/"});
+				            loadCart();
+				        	location.href="http://localhost/JS/biyao/html/shopCar.html";
+				       })
+				        
+				        //sup_logo
+				        $(".sup_logo").mouseenter(function(){
+				        	$(this).find("div").css("display","block");
+				        })
+				        $(".sup_logo").mouseleave(function(){
+				        	$(this).find("div").css("display","none");
+				        })
+				        
+				        //选项卡
+				        $(".view_title ul li").eq(0).click(function(){
+				        	$(".view_detail").css("display","block")
+				        	$(".view_comment").css("display","none")
+				        })
+				        $(".view_title ul li").eq(1).click(function(){
+				        	$(".view_detail").css("display","none")
+				        	$(".view_comment").css("display","block")
+				        })
+        		
         	}
-        })
-        //+
-        $(".panel-add").click(function(){
-        	$(".panel-number").text(Number($(".panel-number").text())+1)
-        })
-        
-        
-        
-        //购物车提交
-        $("#addShopCar").click(function(){
-        	$(".color_active .choose_color").css("display","block");
-        	var goodId =$(".panel-top h1").attr("data-good-id");
-        	var goodName =$(".panel-top h1").html();
-        	var goodColor =""+$(".color .choose_color").html()+"";
-        	var goodPrice=$(".panel-money i").html();
-        	var goodNum =Number($(".panel-number").text());
-        	var goodSrc = $(".editor-picture p img").attr("src");
-        	//获取cookie
-            var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
-            var cartObj = convertCartStrToObj(cartStr);
-            console.log(goodColor)
-            //判断该商品是否已经在购物车中存在
-					if(goodId in cartObj){
-						//如果已存在，那么该商品的数量加1
-						cartObj[goodId].num += 1;
-					}else{
-						//如果不存在，那么将新商品的信息存入
-						cartObj[goodId] = {
-							name : goodName,
-							price : goodPrice,
-							num : goodNum,
-							src : goodSrc,
-							color : goodColor
-						};
-					}
-		    
-            cartStr = convertObjToCartStr(cartObj);
-            console.log(cartStr)
-            $.cookie("cart",cartStr,{expires : 7,path:"/"});
-            loadCart();
-        	location.href="http://localhost/JS/biyao/html/shopCar.html";
-       })
-        
-        //sup_logo
-        $(".sup_logo").mouseenter(function(){
-        	$(this).find("div").css("display","block");
-        })
-        $(".sup_logo").mouseleave(function(){
-        	$(this).find("div").css("display","none");
-        })
-        
-        //选项卡
-        $(".view_title ul li").eq(0).click(function(){
-        	$(".view_detail").css("display","block")
-        	$(".view_comment").css("display","none")
-        })
-        $(".view_title ul li").eq(1).click(function(){
-        	$(".view_detail").css("display","none")
-        	$(".view_comment").css("display","block")
-        })
+
         })
            
            			//加载购物车中的信息（使商品页与购物车页中的购物车数量同步）

@@ -350,3 +350,68 @@ body{
             }
         }
 }
+//tanchukuang
+.alert_box{
+    z-index: 10000;
+    width: 364px;
+    top: 50%;
+    margin-top: -100px;
+    left: 429.5px;
+    position: fixed;
+    display: none;
+        background-color: #fff;
+    padding: 0 20px 25px;
+    .alert_top{
+        height: 40px;
+        border-bottom: 1px dotted #ccc;
+        line-height: 40px;
+        font-size: 18px;
+        background-color: #fff;
+        .alert_close{
+            height: 16px;
+            width: 16px;
+            display: block;
+            float: right;
+            margin: 12px 0 0 0;
+            background: url(http://static1.biyao.com/pc/common/img/cls_btn.png?v=biyao_b68db81) no-repeat;
+            cursor: pointer;
+        }
+        span:nth-of-type(2){
+            font-size: 18px !important;
+        }
+    }
+    .alert_body{
+        div{
+            padding: 20px;
+        }
+    }
+    .alert_foot{
+        text-align: center;
+        a{
+            background-color: #724A88;
+            border-radius: 3px;
+            height: 28px;
+            width: 60px;
+            margin-left: 5px;
+            display: inline-block;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            line-height: 28px;
+            span{
+                color: #fff;
+            }
+        }
+    }
+}
+
+.bg_change{
+     width:100%;
+    background: #000;
+    height:1028px;
+    opacity:0.5;
+    zIndex:1000;
+    position: fixed;
+    top:0;
+    left:0
+}

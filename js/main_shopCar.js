@@ -19,15 +19,19 @@ require(["jquery"],function($){
 		var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
         
         if(!cartStr) {
-					$("").css({
-						display: "block"
-					});
+				$("").css({
+					display: "block"
+				});
 				} else {
 					var cartObj = convertCartStrToObj(cartStr);
+					var zongjia =0;
+					var jianshu =0;
 					//遍历所有的商品生成html添加到购物车列表中去
 					for(var id in cartObj) {
 						//商品信息对象
 						var good = cartObj[id];
+						zongjia +=good.num*good.price;
+						jianshu +=good.num;
 			var str = `
 				<div class="shopping_box" data-good-id=`+id+`>
 				<div class="order_title">
@@ -41,7 +45,7 @@ require(["jquery"],function($){
 							<td><i class="chooseAll"></i></td>
 							<td>
 								<span>
-									<a href="#"><img src="../img/shop1_1_ (1)_a.jpg"/></a>
+									<a href="#"><img src="`+good.src+`"/></a>
 								</span>
 							</td>
 							<td>
@@ -61,7 +65,7 @@ require(["jquery"],function($){
 								<span>普通包装</span>
 								<span>(免费)</span>
 							</td>
-							<td class="zongjia">¥`+good.price*good.num+`</td>
+							<td class="xiaoji">¥`+good.price*good.num+`</td>
 							<td><a href="#" class="del"></a></td>
 						</tr>
 					</tbody>
@@ -71,8 +75,8 @@ require(["jquery"],function($){
 						//将上面的结构添加到cartList中去
 						$(str).appendTo(".shop");
 					}
-					$(".zongjia").html("¥"+good.price*good.num);
-					$(".jianshu").html(good.num)
+					$(".zongjia").html("¥"+zongjia);
+					$(".jianshu").html(jianshu)
 				}
         
         //删除按钮
@@ -90,17 +94,24 @@ require(["jquery"],function($){
 							path: "/"
 						});
 						loadCart()
-						$(".zongjia").html("¥"+0);
-					    $(".jianshu").html(0)
+						zongjia=0;
+						jianshu=0;
+						for(var id in cartObj){
+				        	var good = cartObj[id];
+							zongjia +=good.num*good.price;
+							jianshu +=good.num;
+				        }
+						$(".zongjia").html("¥"+zongjia);
+					    $(".jianshu").html(jianshu)
 					})
         
         //全选按钮
-        for(i in $(".chooseAll")){
-        	$(".chooseAll").eq(i).click(function(){
-		        	$(".chooseAll").toggleClass("all_choose");
-		        	$(".chooseAll").css("background","url(../img/commonSprite.png) no-repeat -20px -80px");
-		       })
-        }
+//      for(i in $(".chooseAll")){
+//      	$(".chooseAll").eq(i).click(function(){
+//		        	$(".chooseAll").toggleClass("all_choose");
+//		        	$(".chooseAll").css("background","url(../img/commonSprite.png) no-repeat -20px -80px");
+//		       })
+//      }
         //减
        $(".minus").click(function(){
        	     var id = $(this).parents('.shopping_box').attr("data-good-id");
@@ -111,16 +122,32 @@ require(["jquery"],function($){
 				//将页面上显示的数量减1
 				$(this).siblings("input").val("" + cartObj[id].num);
 				//更新页面上的小计
-				$(".zongjia").html(cartObj[id].num * cartObj[id].price + "");
+				$(this).parent().siblings(".xiaoji").html(cartObj[id].num * cartObj[id].price + "");
 				//将信息放回cookie
 				$.cookie('cart', convertObjToCartStr(cartObj), {
 					expires: 7,
 					path: "/"
 				});
-				$(".jianshu").html(cartObj[id].num);
+				zongjia=0;
+				for(var id in cartObj){
+		        	var good = cartObj[id];
+					zongjia +=good.num*good.price
+		        }
+				$(".zongjia").html("¥"+zongjia);
+				
+				$(".jianshu").html(parseInt($(".jianshu").html())-1)
 				loadCart()
+			}else{
+				$(".alert_box").css("display","block");
+				$(".bgcolor").toggleClass("bg_change");
+				$(".alert_close").off("click")
+				$(".alert_close").click(function(){
+					$(".alert_box").css("display","none");
+				    $(".bgcolor").toggleClass("bg_change");
+				})
 			}
        })
+
        //加
        $(".add").click(function(){
        	     var id = $(this).parents('.shopping_box').attr("data-good-id");
@@ -130,13 +157,19 @@ require(["jquery"],function($){
 				//将页面上显示的数量减1
 				$(this).siblings("input").val("" + cartObj[id].num);
 				//更新页面上的小计
-				$(".zongjia").html(cartObj[id].num * cartObj[id].price + "");
+				$(this).parent().siblings(".xiaoji").html(cartObj[id].num * cartObj[id].price + "");
 				//将信息放回cookie
 				$.cookie('cart', convertObjToCartStr(cartObj), {
 					expires: 7,
 					path: "/"
 				});
-				$(".jianshu").html(cartObj[id].num);
+				zongjia=0;
+				for(var id in cartObj){
+		        	var good = cartObj[id];
+					zongjia +=good.num*good.price
+		        }
+				$(".zongjia").html("¥"+zongjia);
+				$(".jianshu").html(parseInt($(".jianshu").html())+1)
 				loadCart()
        })
         
@@ -181,7 +214,7 @@ require(["jquery"],function($){
 					//获取到购物车中所有商品的数量
 					var total = 0;
 					for(var id in cartObj){
-						total += cartObj[id].num;
+						total +=1;
 					}
 					$("#shopCar").html(total);
 			}

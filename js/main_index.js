@@ -12,6 +12,9 @@ require(["jquery"],function($){
 				fnMoudle.logStatus();
 				fnMoudle.tiaozhuan();
 				
+				//添加链接
+				$(".container_1 ul li a").attr("href","http://localhost/JS/biyao/html/active.html");
+				
             var swiper = new Swiper('.swiper-container', {
 		        pagination: '.swiper-pagination',
 		        nextButton: '.swiper-button-next',
