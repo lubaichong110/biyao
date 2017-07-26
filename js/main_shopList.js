@@ -27,6 +27,26 @@ require(["jquery"],function($){
         //加载商品列表信息
         $.getJSON("../data/shopList.json",function(res){
         	//console.log(res[0].obj[0].obj[0].info)
+        	//女装的时候渲染页面
+        	if(shop_index==1){
+        		var str_nv =`
+        		<a href="#">首页</a>
+			<span>
+				<b>></b>
+				女装
+			</span>
+        		`
+        		var str_nv2=`
+        		<span><a href="#">女装：</a></span>
+				<ul>
+					<li><a href="#">女裙</a></li>
+					<li><a href="#">半身裙</a></li>
+					<li><a href="#">T恤</a></li>
+				</ul>
+        		`
+        		$(".bread").html(str_nv);
+        		$(".cateBread").html(str_nv2);
+        	}
         	var data =res[shop_index]//获取男装json数据
         	console.log(data.obj[0].obj.length)
             var str ="";

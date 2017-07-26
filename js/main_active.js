@@ -32,7 +32,7 @@ require(["jquery"],function($){
     		for(var j=0;j<res[i].item.length;j++){
     			//console.log(res[i].item[j])
     			str+=`
-    			<a href="javascript:;">
+    			<a href="javascript:;" class="pro">
 					<dl>
 						<dt>
 							<h2>`+res[i].item[j].salePoint+`</h2>
@@ -47,7 +47,10 @@ require(["jquery"],function($){
     		str+=`</li>`;
     	}
     	$(".newProduct ul").append(str)
-    	
+    	$(".pro").click(function(){
+			$.cookie("shop_index",0);
+			location.href="http://localhost/JS/biyao/html/shopList.html";
+		})
     })
             var start_index =1;
           	var end_index =2;

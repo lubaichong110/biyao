@@ -181,6 +181,12 @@ require(["jquery"],function($){
 		    			$.cookie("shop_index",i-1);
 		    			location.href="http://localhost/JS/biyao/html/shopList.html";
 		    		})
+		    		
+		    		//添加假链接
+		    		$(".sub_ul").find("a").click(function(){
+		    			$.cookie("shop_index",0);
+		    			location.href="http://localhost/JS/biyao/html/shopList.html";
+		    		})
 		    	}
 		    }
 		    

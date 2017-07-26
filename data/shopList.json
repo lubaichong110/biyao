@@ -586,7 +586,7 @@
               "size":["S","M","L","XL","XXL"],
               "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (1).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"长袖翻领中长款连衣裙",
 					"price":"188"
 				},
 			    {
@@ -602,7 +602,7 @@
               "size":["S","M","L","XL"],
               "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (2).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"麻布印花连肩袖连衣裙",
 					"price":"188"
 				},
 				{
@@ -618,27 +618,27 @@
               "size":["S","M","L","XL"],
               "sub_info":"100%纯棉吸湿透气，柔软亲肤，100支双丝光处理后布面平整光洁",
 				    "img":"../img/shop2_1_ (3).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"亚麻抽绳衬衫式连衣裙",
 					"price":"188"
 				},
 				{
 				    "img":"../img/shop2_1_ (4).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"气质无袖小礼服长裙",
 					"price":"188"
 				},
 				{
 				    "img":"../img/shop2_1_ (5).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"时尚收腰连衣裙",
 					"price":"¥188"
 				},
 				{
 				    "img":"../img/shop2_1_ (6).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"麻布印花一字领连衣裙",
 					"price":"¥188"
 				},
 				{
 				    "img":"../img/shop2_1_ (7).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"重磅真丝连衣裙",
 					"price":"¥188"
 				},
 				{
@@ -648,65 +648,102 @@
 				},
 				{
 				    "img":"../img/shop2_1_ (9).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
+					"info":"条纹收身短袖针织连衣裙",
 					"price":"¥188"
 				}]
            },
-           {  "name":"T恤衫",
+           {  "name":"半身裙",
               "obj":[{
-				    "img":"../img/shop1_2_ (1).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(1).jpg",
+					"info":"蕾丝半裙",
+					"price":"¥249"
 				},
 			    {
-				    "img":"../img/shop1_2_ (2).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(2).jpg",
+					"info":"轻薄柔软工装排扣A字短裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (3).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(3).jpg",
+					"info":"一片式时尚系带半裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (4).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(4).jpg",
+					"info":"优雅日系牛仔中裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (5).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(5).jpg",
+					"info":"麻布印花打褶半裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (6).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(6).jpg",
+					"info":"优雅简约撞色半裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (7).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(7).jpg",
+					"info":"经典中腰A字裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (8).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(8).jpg",
+					"info":"遮肚显高牛仔短裙",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (9).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_2_(9).jpg",
+					"info":"复古高腰 双苞芯牛仔短裙",
+					"price":"¥249"
+				}]
+           },
+           {  "name":"T恤",
+              "obj":[{
+				    "img":"../img/shop2_3_(1).jpg",
+					"info":"芍药印花双面丝光棉T恤",
+					"price":"¥249"
+				},
+			    {
+				    "img":"../img/shop2_3_(2).jpg",
+					"info":"纯棉珠地短袖女POLO",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (10).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_3_(3).jpg",
+					"info":"丝光棉黑白T恤（两件装）",
+					"price":"¥249"
 				},
 				{
-				    "img":"../img/shop1_2_ (11).jpg",
-					"info":"100支双丝光真贝扣Polo衫",
-					"price":"¥188"
+				    "img":"../img/shop2_3_(4).jpg",
+					"info":"女圆领卷边无袖背心T",
+					"price":"¥249"
+				},
+				{
+				    "img":"../img/shop2_3_(5).jpg",
+					"info":"冰爽丝光棉小开领长袖",
+					"price":"¥249"
+				},
+				{
+				    "img":"../img/shop2_3_(6).jpg",
+					"info":"柔软垂坠小蝙蝠袖女短T",
+					"price":"¥249"
+				},
+				{
+				    "img":"../img/shop2_3_(7).jpg",
+					"info":"铜氨百搭U型领简约T恤",
+					"price":"¥249"
+				},
+				{
+				    "img":"../img/shop2_3_(8).jpg",
+					"info":"花灰纱圆领短T/2件装",
+					"price":"¥249"
+				},
+				{
+				    "img":"../img/shop2_3_(9).jpg",
+					"info":"圆领短T黑白2件装",
+					"price":"¥249"
 				}]
            }
            ]

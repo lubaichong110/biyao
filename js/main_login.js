@@ -49,8 +49,7 @@ require(["jquery"],function($){//先加载$，再加载cookie
 			     	    $(".account-error").css("display","block");
 			     	    $("#password").addClass("input-error")
 			     		$(this).next().html("密码格式错误")
-		     	   }else{
-		     	   	arr[0]=true;
+		     	  }else{
 		     	   	$(".account-error").css("display","none");
 			     	    $("#password").removeClass("input-error")
 		     	   }

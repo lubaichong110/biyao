@@ -35,13 +35,6 @@ require(["jquery"],function($){//先加载$，再加载cookie
 				var userData = users[i].split(",");
 				//["test1",123] ["test2","abc"] ["test3",888]
 				obj[userData[0]] = userData[1];
-				/*转为对象如下：
-				 * obj = {
-				 * 	test1 : 123,
-				 *  test2 : abc,
-				 *  test3 : 888
-				 * }
-				 */
 			}
 			return obj;
 		}
@@ -63,7 +56,7 @@ require(["jquery"],function($){//先加载$，再加载cookie
 
      
      
-     var arr=["flase","flase","flase","flase"];
+     var arr=[false,false,false,false];
      var complete = false;//表单提交，开始要让它默认不提交，
      function regCheck(){
      	//验证手机号
@@ -148,15 +141,17 @@ require(["jquery"],function($){//先加载$，再加载cookie
      regCheck()
      
       $(".account-btn").click(function(){
-//   		for(var i=0;i<arr.length;i++){
-//			 	if(arr[i]==false){
-//			 		//console.log("1")
-//			 		return ;
-//			 	}else{
-//			 		complete=true;
-//			 	}
-//			 }//判断是否能提交
-			 if(!complete){
+      	console.log(complete)
+      	
+     		for(var i=0;i<arr.length;i++){
+			 	if(arr[i] == false){
+			 		regCheck()
+			 		return ;
+			 	}else{
+			 		complete=true;
+			 	}
+			 }//判断是否能提交
+			 if(complete){
 			 	var username =$("#userName").val();
 			 	var pwd =$("#password").val();
 			 	//console.log(username+pwd)
@@ -164,15 +159,13 @@ require(["jquery"],function($){//先加载$，再加载cookie
 			 	//获取cookie中的用户信息
 			 	var users = $.cookie("registerUsers") ? $.cookie("registerUsers") : "";
 			 	//将字符串转为对象
-			 	console.log(users)
+			 	//console.log(users)
 			 	users = convertStrToObj(users);
 			 	if(username in users){ //判断usn属性是否在users对象中。
 					alert("用户名已经被注册");
 					return;
 				}else{
 					//注册成功，设置用户信息的cookie
-					//test1 123  test2 abc  test3 888
-					//"test1,123:test2,abc:test3,888"设置cookie的value值
 					//registerUsers 设置cookie的name(key)值
 					//将用户添加到已注册用户列表对象中
 					users[username] = pwd;
@@ -180,7 +173,7 @@ require(["jquery"],function($){//先加载$，再加载cookie
 					userStr = convertObjToStr(users);
 					//设置用户信息cookie
 					$.cookie("registerUsers",userStr,7);
-					console.log(decodeURIComponent(document.cookie))
+					//console.log(decodeURIComponent(document.cookie))
 					location.href="http://localhost/JS/biyao/html/login.html";
 				}
 			 }
